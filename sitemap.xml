@@ -4,25 +4,31 @@
   <!-- Principales -->
   <url>
     <loc>https://www.revoapp.ai/</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/services.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/pricing.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.revoapp.ai/industries.html</loc>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/hear-a-sample-call.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -30,67 +36,67 @@
   <!-- Industrias: servicios a domicilio -->
   <url>
     <loc>https://www.revoapp.ai/industry_home_service.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_hvac.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_plumbing.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_locksmith.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_roofing.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_garage_door.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_air_duct_cleaning.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_landscape.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_snow_removal.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_handyman.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_towing.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -98,49 +104,49 @@
   <!-- Industrias: negocios profesionales -->
   <url>
     <loc>https://www.revoapp.ai/industry_small_business.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_healthcare_medical.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_legal.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_it_technology_communications.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_corporate_government.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_financial_service.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_retail_ecommerce.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/industry_tourism_travel_hospitality.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -148,13 +154,13 @@
   <!-- Legales -->
   <url>
     <loc>https://www.revoapp.ai/privacy-policy.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://www.revoapp.ai/terms-of-service.html</loc>
-    <lastmod>2026-09-02</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

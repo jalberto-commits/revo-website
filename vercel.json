@@ -2,12 +2,28 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "revoapp.ai"
+        }
+      ],
+      "destination": "https://www.revoapp.ai/:path*",
+      "permanent": true
+    },
+    {
       "source": "/ser.html",
       "destination": "/services.html",
       "permanent": true
     },
     {
       "source": "/ind",
+      "destination": "/industries.html",
+      "permanent": true
+    },
+    {
+      "source": "/ind.html",
       "destination": "/industries.html",
       "permanent": true
     }
