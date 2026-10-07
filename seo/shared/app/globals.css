@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { font-feature-settings: "rlig" 1, "calt" 1; }
+}
+
+/* Custom scrollbar */
+html:not(.revo-brand-document)::-webkit-scrollbar, html:not(.revo-brand-document) ::-webkit-scrollbar { width: 10px; height: 10px; }
+html:not(.revo-brand-document)::-webkit-scrollbar-track, html:not(.revo-brand-document) ::-webkit-scrollbar-track { background: #09090b; }
+html:not(.revo-brand-document)::-webkit-scrollbar-thumb, html:not(.revo-brand-document) ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 5px; }
+html:not(.revo-brand-document)::-webkit-scrollbar-thumb:hover, html:not(.revo-brand-document) ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }

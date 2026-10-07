@@ -1,0 +1,373 @@
+[
+  {
+    "slug": "after-hours",
+    "title": "After-hours answering for home service businesses",
+    "description": "Plan a clear after-hours call flow: capture the request, set expectations and decide how your team follows up.",
+    "eyebrow": "After the workday",
+    "lead": "Your business hours can end without ending the conversation.",
+    "intro": "A caller outside office hours may need information, want to request a visit or report an urgent issue. A useful answering flow makes the next step clear without promising that a technician is available.",
+    "sourcePaths": [
+      "features/24-7-answering",
+      "problems/after-hours-calls",
+      "after-hours-answering-service"
+    ],
+    "sections": [
+      {
+        "title": "Answering a call and attending a job are different decisions.",
+        "paragraphs": [
+          "Revo\u2019s published pricing page lists 24/7 answering in its Launch Offer. That describes phone coverage; it does not establish your company\u2019s service hours, response time or emergency availability.",
+          "Before forwarding customer calls, review the proposed flow with your team and test it against the hours and services you actually provide."
+        ],
+        "items": [
+          "State whether the office is closed and when a follow-up can be expected.",
+          "Capture the request and contact information your team needs.",
+          "Use an approved handoff policy; do not promise a visit or quote."
+        ]
+      },
+      {
+        "title": "Give different requests a clear next step.",
+        "paragraphs": [
+          "An estimate request for next week and a caller reporting a problem tonight should not receive the same expectation. The following are illustrative intake situations, not recordings or customer results."
+        ],
+        "items": [
+          "Routine request: record the type of work and a preferred callback window.",
+          "Existing appointment: collect enough detail for your office to find the booking.",
+          "Caller describes urgency: follow your approved escalation policy; no automated diagnosis or dispatch is assumed."
+        ]
+      },
+      {
+        "title": "Build a handoff your team can maintain.",
+        "paragraphs": [
+          "Document who reviews requests when the office opens, which contact route is actually monitored and what happens if that route is unavailable. Choose an answering option only after reviewing these operational details.",
+          "Availability should be stated consistently across your website, answering script and follow-up process. If your business does not offer after-hours field service, the call flow should say so."
+        ],
+        "items": [
+          "Agree the greeting and service limits.",
+          "Review routine and urgent example calls with your team.",
+          "Confirm the next step is described correctly before routing real callers."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does answering after hours mean a technician is available?",
+        "a": "No. Phone coverage and field-service availability are separate. Your service hours and escalation rules must set the expectation."
+      },
+      {
+        "q": "Can I use one flow for nights, weekends and holidays?",
+        "a": "You can propose a shared policy, but review each period and the people responsible for follow-up before using it."
+      },
+      {
+        "q": "What should the caller be told about a callback?",
+        "a": "Use a window your team has approved. Do not give a response-time guarantee that your operation cannot support."
+      }
+    ],
+    "takeaway": "One after-hours page covers the commercial intent previously split between after-hours and 24/7 material.",
+    "pricingVariant": "full",
+    "navigationLabel": "After-hours answering",
+    "publicationStatus": "approved"
+  },
+  {
+    "slug": "missed-calls",
+    "title": "A practical plan for missed business calls",
+    "description": "Review why calls go unanswered and build a follow-up process for your home service business without assuming lost revenue.",
+    "eyebrow": "Call handling",
+    "lead": "Find the gap before choosing the fix.",
+    "intro": "When you are on a job, driving between appointments or helping another customer, a ringing phone can interrupt the work. Start by understanding what happens to unanswered calls and who handles the next step.",
+    "sourcePaths": [
+      "problems/missed-calls"
+    ],
+    "sections": [
+      {
+        "title": "Review the journey of an unanswered call.",
+        "paragraphs": [
+          "Use your own call records to check whether a call reached voicemail, disconnected or reached another answering option. Do not assume every unanswered call was a qualified new job.",
+          "Look for patterns by time and situation. A call from an existing customer, a wrong number and a new service inquiry need different treatment."
+        ],
+        "items": [
+          "What does the caller hear when nobody picks up?",
+          "Is there a clear way to leave contact details?",
+          "Who reviews the request and confirms the next action?"
+        ]
+      },
+      {
+        "title": "Match the response to the reason you missed the call.",
+        "paragraphs": [
+          "A useful fix depends on the gap: an unclear voicemail greeting, inconsistent office coverage or a missing follow-up owner. AI answering is one option to evaluate alongside voicemail and human reception.",
+          "Revo\u2019s published offer lists answering and call summaries. Confirm the call flow you need through review and testing; this page does not claim that every caller will book or that no calls can ever be missed."
+        ],
+        "items": [
+          "If you are busy on-site, review how a caller can leave a usable request.",
+          "If a request is recorded, make one person responsible for follow-up.",
+          "If calls arrive outside office hours, use the after-hours policy rather than promising immediate field service."
+        ]
+      },
+      {
+        "title": "Measure a process, not a promised recovery.",
+        "paragraphs": [
+          "Track the requests your team actually receives and the actions it takes. Compare like-for-like periods, and distinguish answered calls, service inquiries and confirmed bookings.",
+          "If you want to explore the financial side, use the separate scenario worksheet. It uses your inputs and does not turn an unanswered call into measured lost revenue."
+        ],
+        "items": [
+          "Record the reason and next action for a request.",
+          "Check whether follow-up happened within your own agreed window.",
+          "Keep observed results separate from scenarios or forecasts."
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is every missed call lost revenue?",
+        "a": "No. Calls can include existing customers, wrong numbers and unqualified inquiries. Actual outcomes require your own records."
+      },
+      {
+        "q": "Should I replace voicemail immediately?",
+        "a": "Review the existing process first. A clearer greeting and reliable follow-up may address part of the problem; compare options against your actual needs."
+      },
+      {
+        "q": "What is the difference between this page and the cost worksheet?",
+        "a": "This page helps you improve the handling process. The worksheet explores potential job value under assumptions; it does not diagnose your phone setup."
+      }
+    ],
+    "takeaway": "Process diagnosis and follow-up are the focus; no loss rate, conversion uplift or customer outcome is asserted.",
+    "pricingVariant": "missed-calls",
+    "navigationLabel": "Missed calls",
+    "publicationStatus": "approved"
+  },
+  {
+    "slug": "compare/ai-vs-voicemail",
+    "title": "AI answering vs voicemail for home service businesses",
+    "description": "Compare conversation, recorded messages and follow-up requirements when choosing between AI answering and voicemail.",
+    "eyebrow": "Compare your options",
+    "lead": "Choose the next conversation, not just a different greeting.",
+    "intro": "Voicemail and AI answering serve different roles. A recorded message can be sufficient for some requests; a configured conversational flow may suit others. The right choice depends on what your callers need and what your team can support.",
+    "sourcePaths": [
+      "compare/ai-answering-service-vs-voicemail"
+    ],
+    "comparison": {
+      "left": "Voicemail",
+      "right": "Configured AI answering",
+      "rows": [
+        [
+          "Caller experience",
+          "The caller leaves a recorded message after the greeting.",
+          "The caller interacts with an automated conversational flow."
+        ],
+        [
+          "Information collected",
+          "Depends on what the caller chooses to include.",
+          "Depends on the questions and rules configured for the flow."
+        ],
+        [
+          "Follow-up",
+          "Your team reviews and returns the message.",
+          "Your team still needs an agreed follow-up and exception process."
+        ],
+        [
+          "Changes and limits",
+          "Keep the greeting and callback expectation current.",
+          "Review the script, boundaries and behavior with test calls."
+        ],
+        [
+          "Fit",
+          "May fit a simple message-taking process.",
+          "May fit inquiries that benefit from structured intake."
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Start with the message your team needs.",
+        "paragraphs": [
+          "For a simple callback request, a concise voicemail greeting can work well if messages are reviewed reliably. If callers often omit the type of service or the property location, structured intake may be worth evaluating.",
+          "An automated conversation still needs clear boundaries. It should not invent availability, a repair price or a service your business does not provide."
+        ],
+        "items": []
+      },
+      {
+        "title": "Compare the operating work as well as the subscription.",
+        "paragraphs": [
+          "Voicemail needs a current greeting and someone to review messages. AI answering needs a reviewed configuration and someone to handle exceptions and requests. Neither removes your responsibility for the customer\u2019s next step.",
+          "Use your actual phone plan and the current answering offer when comparing costs. This page does not assume voicemail is free or that AI will pay for itself."
+        ],
+        "items": []
+      },
+      {
+        "title": "Test ordinary calls and awkward ones.",
+        "paragraphs": [
+          "Try a routine estimate request, a caller asking about an existing appointment and a request outside your service area. Ask whether the caller knows what happens next. These are proposed tests, not verified Revo performance results."
+        ],
+        "items": [
+          "Can a caller leave enough information for follow-up?",
+          "Is the next step consistent with your business hours?",
+          "Can your team handle a request the flow cannot resolve?"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is voicemail always a poor choice?",
+        "a": "No. It can suit straightforward message-taking if callers receive a clear greeting and your team follows up reliably."
+      },
+      {
+        "q": "Does AI answering guarantee a booking?",
+        "a": "No. A booking depends on the supported configuration, availability and the caller\u2019s request. Evaluate those details rather than assuming an outcome."
+      },
+      {
+        "q": "Can I compare both before changing my phone setup?",
+        "a": "Yes. Review example scenarios and the operational work each option needs before deciding how real calls should be routed."
+      }
+    ],
+    "takeaway": "Balanced option comparison; no competitor statistics or guaranteed outcomes.",
+    "pricingVariant": "voicemail",
+    "navigationLabel": "AI vs voicemail",
+    "publicationStatus": "approved"
+  },
+  {
+    "slug": "compare/ai-vs-live-receptionist",
+    "title": "AI answering vs a live receptionist",
+    "description": "Compare automated and human call handling for your home service business, including judgment, coverage and operational work.",
+    "eyebrow": "Compare your options",
+    "lead": "Decide which calls need a person and which need a clear process.",
+    "intro": "A live receptionist and an AI answering flow offer different strengths. Treat the choice as an operating decision: the kinds of calls you receive, the judgment they require and the coverage you need.",
+    "sourcePaths": [
+      "compare/ai-answering-service-vs-live-receptionist",
+      "guides/ai-vs-human-receptionist"
+    ],
+    "comparison": {
+      "left": "Live receptionist",
+      "right": "Configured AI answering",
+      "rows": [
+        [
+          "Judgment",
+          "A person can use context and ask follow-up questions.",
+          "Behavior depends on the flow, instructions and limits configured."
+        ],
+        [
+          "Coverage",
+          "Depends on staffing or the provider\u2019s agreed hours.",
+          "Depends on the answering service\u2019s supported coverage and setup."
+        ],
+        [
+          "Complex requests",
+          "A person may suit exceptions and sensitive conversations.",
+          "Needs clear boundaries and an agreed path for unresolved requests."
+        ],
+        [
+          "Operating effort",
+          "Staffing or vendor management, training and handoff.",
+          "Configuration review, test calls and exception handling."
+        ],
+        [
+          "Cost comparison",
+          "Use an actual quote or your own staffing costs.",
+          "Use the current offer and your expected usage, not promised savings."
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "title": "Keep human judgment where it matters.",
+        "paragraphs": [
+          "Calls involving a dispute, an unusual service request or an unclear expectation may benefit from a person who knows your business. A conversational system should not be treated as a substitute for every kind of judgment.",
+          "A routine intake flow can be evaluated separately. Decide what information is needed and what the flow must leave for your team to confirm."
+        ],
+        "items": []
+      },
+      {
+        "title": "Define the handoff before choosing coverage.",
+        "paragraphs": [
+          "List the calls your business wants a person to handle and agree how those requests reach someone. Do not assume an integration, transfer or dispatch feature is available merely because it would be useful.",
+          "Revo\u2019s published offer provides a starting point for pricing. Review the actual supported workflow with your team and confirm the details of the plan you are considering."
+        ],
+        "items": []
+      },
+      {
+        "title": "Compare real operating inputs.",
+        "paragraphs": [
+          "For a receptionist, use the staffing arrangement or a current provider quote relevant to your business. For an answering service, use the current price, included usage and the work your team will still perform.",
+          "Avoid comparing a hypothetical annual salary with a subscription as if they delivered identical service. Coverage, responsibilities and exceptions can make the two arrangements different."
+        ],
+        "items": [
+          "Which requests require business-specific judgment?",
+          "Who follows up on unresolved calls?",
+          "What happens when the usual contact is unavailable?"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is AI always cheaper than a live receptionist?",
+        "a": "This page makes no universal cost claim. Compare current quotes, usage, coverage and responsibilities for your own operation."
+      },
+      {
+        "q": "Can an answering service replace every task a receptionist performs?",
+        "a": "Do not assume that. Reception work may include activities beyond phone intake, and automated flows have their own limits."
+      },
+      {
+        "q": "Can I keep people involved in the call process?",
+        "a": "Yes. Plan which requests need human review and validate how the proposed setup supports that handoff before using it."
+      }
+    ],
+    "takeaway": "Balanced operating comparison; no salary estimate, superiority claim or unverified integration.",
+    "pricingVariant": "receptionist",
+    "navigationLabel": "AI vs receptionist",
+    "publicationStatus": "approved"
+  },
+  {
+    "slug": "cost-of-missed-calls",
+    "title": "Explore the potential value of unanswered inquiries",
+    "description": "Use an editable scenario worksheet to explore potential job value, separating assumptions from actual revenue and profit.",
+    "eyebrow": "Scenario worksheet",
+    "lead": "Put your assumptions on the page.",
+    "intro": "An unanswered call is not automatically a lost job. This worksheet helps you explore a scenario using numbers you choose. It is not a forecast, a measurement of lost revenue or a claim about results from Revo.",
+    "sourcePaths": [
+      "pricing/cost-of-missed-calls"
+    ],
+    "calculator": true,
+    "sections": [
+      {
+        "title": "Define what belongs in the calculation.",
+        "paragraphs": [
+          "Use service inquiries rather than all phone calls. Existing customers, spam and wrong numbers should not be counted as new job opportunities. If you do not know the values, leave the inputs blank instead of inventing a baseline.",
+          "The formula is unanswered qualified inquiries \u00d7 assumed booking probability \u00d7 assumed average job value for one chosen period. It estimates potential gross job value under those assumptions; it is not cash collected or profit."
+        ],
+        "items": []
+      },
+      {
+        "title": "Read the result as a scenario.",
+        "paragraphs": [
+          "Not every booked job is completed or paid. Labor, materials, cancellations and capacity affect the business outcome. A caller may also contact you again, so an unanswered inquiry should not be counted twice.",
+          "Changing an answering process does not establish that all potential value will be captured. Keep observed results in your own records separate from the worksheet."
+        ],
+        "items": []
+      },
+      {
+        "title": "Use the worksheet to guide a decision.",
+        "paragraphs": [
+          "Compare conservative and optimistic assumptions for the same period, then ask whether the operating change is practical. The missed-calls page covers the actual handling and follow-up process; this page is specifically about transparent assumptions.",
+          "Current plan prices below are a separate reference. The worksheet does not subtract a subscription or calculate a guaranteed payback period."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does the result show money my business has lost?",
+        "a": "No. It shows potential gross job value under your assumptions. It is not measured loss, collected revenue, profit or a Revo outcome."
+      },
+      {
+        "q": "Can I use unknown inputs?",
+        "a": "Leave unknown inputs blank. The worksheet does not supply industry averages or inferred conversion rates."
+      },
+      {
+        "q": "What time period does the result cover?",
+        "a": "The period you choose and label. All inputs must use the same period; no automatic annualization is applied."
+      }
+    ],
+    "takeaway": "Distinct from missed-calls: user-entered scenario math and interpretation, rather than call-handling diagnosis.",
+    "pricingVariant": "worksheet",
+    "navigationLabel": "Cost of missed calls",
+    "publicationStatus": "approved"
+  }
+]

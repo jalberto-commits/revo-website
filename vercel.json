@@ -1,5 +1,5 @@
 {
-  "outputDirectory": ".",
+  "outputDirectory": ".seo-dist",
   "redirects": [
     {
       "source": "/ser.html",
@@ -10,6 +10,28 @@
       "source": "/ind",
       "destination": "/industries.html",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/ai-answering-service/after-hours",
+      "destination": "/ai-answering-service/after-hours.html"
+    },
+    {
+      "source": "/ai-answering-service/missed-calls",
+      "destination": "/ai-answering-service/missed-calls.html"
+    },
+    {
+      "source": "/ai-answering-service/compare/ai-vs-voicemail",
+      "destination": "/ai-answering-service/compare/ai-vs-voicemail.html"
+    },
+    {
+      "source": "/ai-answering-service/compare/ai-vs-live-receptionist",
+      "destination": "/ai-answering-service/compare/ai-vs-live-receptionist.html"
+    },
+    {
+      "source": "/ai-answering-service/cost-of-missed-calls",
+      "destination": "/ai-answering-service/cost-of-missed-calls.html"
     }
   ]
 }

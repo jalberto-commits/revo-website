@@ -1,0 +1,25 @@
+{
+  "name": "revo-five-pages-publication",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "build:site": "node tools/build-site.mjs",
+    "verify:site": "node tools/verify-site.mjs",
+    "test": "node --import ../shared/scripts/test-typescript.mjs --test ../shared/tests/landing-integration.test.mjs"
+  },
+  "dependencies": {
+    "next": "15.5.19",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  }
+}

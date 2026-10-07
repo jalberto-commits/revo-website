@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build step needed for static site'"
+    "build": "npm --prefix seo/app ci && npm --prefix seo/app run build:site",
+    "seo:build": "npm --prefix seo/app run build:site",
+    "seo:verify": "npm --prefix seo/app run verify:site",
+    "seo:test": "npm --prefix seo/app test"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0"

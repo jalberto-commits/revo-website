@@ -7,3 +7,15 @@ node_modules/
 .env
 .env.local
 .env.*.local
+
+# Local SEO integration/generated files
+.seo-dist/
+.seo-dist.building/
+.local-seo-review/
+seo/app/node_modules
+seo/shared/node_modules
+seo/app/.next/
+seo/app/out/
+seo/app/public/
+seo/app/.release/
+*.tsbuildinfo
