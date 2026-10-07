@@ -9,7 +9,7 @@ import {REVIEW_INDEX, REVIEW_PAGES, reviewPath} from "@/lib/review-cohort";
 const links = [["Services", "/services.html"], ["Industry", "/industries.html"], ["Pricing", "/pricing.html"]];
 const logo = "/ai-answering-service/assets/review/logo.webp";
 
-export function RevoBrandHeader({mode="review"}:{mode?:PageMode}={}) {
+export function RevoBrandHeader({mode="review",acquisitionEnabled=false}:{mode?:PageMode;acquisitionEnabled?:boolean}={}) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     function close(event: KeyboardEvent) { if (event.key === "Escape") setOpen(false); }
@@ -21,10 +21,10 @@ export function RevoBrandHeader({mode="review"}:{mode?:PageMode}={}) {
     <header className="revo-brand-header"><div className="revo-header-inner">
       <a href="/" aria-label="Revo home"><img src={logo} width="75" height="19" alt="Revo" /></a>
       <nav aria-label="Main navigation" className="revo-desktop-nav">{links.map(([text, url]) => <a key={url} href={url}>{text}</a>)}</nav>
-      <div className="revo-header-actions"><FunnelCTA mode={mode} placement="header" className="revo-button">Get Started</FunnelCTA><a className="revo-button revo-button-glass" href={mode === "public" ? "https://apps.apple.com/us/app/revo-ai-receptionist/id6768915591" : "/free-test?preview-intent=iphone"}>Download for iPhone</a></div>
+      <div className="revo-header-actions"><FunnelCTA mode={mode} acquisitionEnabled={acquisitionEnabled} informationalHref="/ai-answering-service/after-hours" informationalLabel="Read call guides" placement="header" className="revo-button">Get Started</FunnelCTA><a className="revo-button revo-button-glass" href={mode === "public" && !acquisitionEnabled ? "/ai-answering-service/cost-of-missed-calls#worksheet" : mode === "public" ? "https://apps.apple.com/us/app/revo-ai-receptionist/id6768915591" : "/free-test?preview-intent=iphone"}>{mode === "public" && !acquisitionEnabled ? "Explore the worksheet" : "Download for iPhone"}</a></div>
       <button className="revo-menu-toggle" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="revo-mobile-navigation" onClick={() => setOpen(value => !value)}><span aria-hidden="true">{open ? "×" : <><i /><i /><i /></>}</span></button>
     </div></header>
-    {open ? <nav id="revo-mobile-navigation" className="revo-mobile-nav" aria-label="Mobile navigation">{links.map(([text, url]) => <a key={url} href={url} onClick={() => setOpen(false)}>{text}</a>)}<FunnelCTA mode={mode} placement="header" className="revo-button">Get Started</FunnelCTA><a className="revo-button revo-button-glass" href={mode === "public" ? "https://apps.apple.com/us/app/revo-ai-receptionist/id6768915591" : "/free-test?preview-intent=iphone"}>Download for iPhone</a></nav> : null}
+    {open ? <nav id="revo-mobile-navigation" className="revo-mobile-nav" aria-label="Mobile navigation">{links.map(([text, url]) => <a key={url} href={url} onClick={() => setOpen(false)}>{text}</a>)}<FunnelCTA mode={mode} acquisitionEnabled={acquisitionEnabled} informationalHref="/ai-answering-service/after-hours" informationalLabel="Read call guides" placement="header" className="revo-button">Get Started</FunnelCTA><a className="revo-button revo-button-glass" href={mode === "public" && !acquisitionEnabled ? "/ai-answering-service/cost-of-missed-calls#worksheet" : mode === "public" ? "https://apps.apple.com/us/app/revo-ai-receptionist/id6768915591" : "/free-test?preview-intent=iphone"}>{mode === "public" && !acquisitionEnabled ? "Explore the worksheet" : "Download for iPhone"}</a></nav> : null}
     {mode === "review" ? <aside className="revo-review-status" aria-label="Private preview controls"><span>Private editorial review · Not published · Local test flows only</span><a href={REVIEW_INDEX}>All five drafts ↗</a></aside> : null}
   </>;
 }
