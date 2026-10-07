@@ -9,7 +9,7 @@ const pages=readRegistry(pathToFileURL(shared+'/')).filter(p=>p.publicationStatu
 const origin=new URL(config.publicOrigin).origin;
 async function walk(dir){const result=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=join(dir,e.name);if(e.isSymbolicLink())throw Error('Symlink in public sources');if(e.isDirectory())result.push(...await walk(p));else if(e.isFile())result.push(p);}return result;}
 async function copyFile(from,to){await mkdir(dirname(to),{recursive:true});await cp(from,to);}
-const publicDirs=['images','css','js','templates','audio','video','snippets'];const rootExtensions=new Set(['.html','.png','.ico','.svg','.css','.js','.webmanifest']);
+const publicDirs=['images','css','js','templates','audio','video','snippets'];const rootExtensions=new Set(['.html','.png','.webp','.ico','.svg','.css','.js','.webmanifest']);
 const originals=[];for(const e of await readdir(website,{withFileTypes:true})){if(e.isDirectory()&&publicDirs.includes(e.name)){for(const f of await walk(join(website,e.name)))if(new Set([...rootExtensions,'.mp4','.webm','.mp3','.wav','.ogg','.ttf','.woff','.woff2','.otf','.jpg','.jpeg','.gif','.json','.txt']).has(extname(f)))originals.push(relative(website,f));}else if(e.isFile()&&(rootExtensions.has(extname(e.name))||['robots.txt','sitemap.xml','llms.txt'].includes(e.name)))originals.push(e.name);}
 for(const p of pages){try{await stat(join(website,landingPath(p).slice(1)+'.html'));throw Error('Existing page collision');}catch(e){if(e.code!=='ENOENT')throw e;}}
 const originalHashes={};for(const f of originals)originalHashes[f]=createHash('sha256').update(await readFile(join(website,f))).digest('hex');
