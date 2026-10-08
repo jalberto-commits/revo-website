@@ -1,1 +1,88 @@
-{"projectId":"prj_1aJWEMaSRTrCX7tghbM2EvaXAcU4","versionId":"558a5000-b460-48a2-ba43-45dc889472f4","routes":[{"source":"/free-trial","destination":"https://revo-funnel-a3-vercel.vercel.app/"},{"source":"/free-account","destination":"https://revo-free-account.vercel.app/"},{"source":"/free-test","destination":"https://revo-free-account.vercel.app/free-test"},{"source":"/free-agent","destination":"https://revo-free-account.vercel.app/free-agent"},{"source":"/test-agent","destination":"https://revo-free-account.vercel.app/test-agent"},{"source":"/complete-free-account","destination":"https://revo-free-account.vercel.app/complete-free-account"}]}
+{
+  "description": "Project-level Vercel routing rules (dashboard). They run before this deployment's vercel.json and static files, on every host. Recorded for verification only; this repository does not change them.",
+  "projectId": "prj_1aJWEMaSRTrCX7tghbM2EvaXAcU4",
+  "versionId": "352eae2c-0328-4ded-8b1d-9b559213f7d9",
+  "capturedAt": "2026-10-07",
+  "rules": [
+    {
+      "id": "9d1b07c2-119e-4653-a684-33dd09952c5e",
+      "name": "Free trial funnel",
+      "type": "rewrite",
+      "match": "^/free-trial/?$",
+      "destination": "https://revo-funnel-a3-vercel.vercel.app/",
+      "enabled": true
+    },
+    {
+      "id": "dec2e149-91ae-4b80-b8b7-c0dbbd271428",
+      "name": "Free account funnel",
+      "type": "rewrite",
+      "match": "^/free-account/?$",
+      "destination": "https://revo-free-account.vercel.app/",
+      "enabled": true
+    },
+    {
+      "id": "4f1aa9ba-0ed4-4105-8d8a-8a3ee4a0fc03",
+      "name": "Free test funnel",
+      "type": "rewrite",
+      "match": "^/free-test/?$",
+      "destination": "https://revo-free-account.vercel.app/free-test",
+      "enabled": true
+    },
+    {
+      "id": "c24f7b59-0f34-4920-8637-d1fb4d3d59c3",
+      "name": "Free agent funnel",
+      "type": "rewrite",
+      "match": "^/free-agent/?$",
+      "destination": "https://revo-free-account.vercel.app/free-agent",
+      "enabled": true
+    },
+    {
+      "id": "05c9e621-22be-4287-87f2-85b0585de152",
+      "name": "Test agent funnel",
+      "type": "rewrite",
+      "match": "^/test-agent/?$",
+      "destination": "https://revo-free-account.vercel.app/test-agent",
+      "enabled": true
+    },
+    {
+      "id": "911574b5-adeb-448b-a4bf-1dcaf17a8ed7",
+      "name": "Complete free account funnel",
+      "type": "rewrite",
+      "match": "^/complete-free-account/?$",
+      "destination": "https://revo-free-account.vercel.app/complete-free-account",
+      "enabled": true
+    },
+    {
+      "id": "4c500e08-3fec-40cd-b0f6-510fc1590238",
+      "name": "Free calls funnel",
+      "type": "rewrite",
+      "match": "^/free-calls/?$",
+      "destination": "https://revo-free-account.vercel.app/free-calls",
+      "enabled": true
+    },
+    {
+      "id": "1496bacd-1d1e-436a-ba79-829dbd4cb908",
+      "name": "Free calls leads API",
+      "type": "rewrite",
+      "match": "^/api/leads/?$",
+      "destination": "https://revo-free-account.vercel.app/api/leads",
+      "enabled": true
+    },
+    {
+      "id": "4248e9f2-99c3-47c0-9fde-3b9da55c0b5b",
+      "name": "Free calls logo",
+      "type": "rewrite",
+      "match": "^/images/revo_logo_dark\\.webp$",
+      "destination": "https://revo-free-account.vercel.app/images/revo_logo_dark.webp",
+      "enabled": true
+    },
+    {
+      "id": "ccbde718-694e-4f7d-93f3-a174ae5663fe",
+      "name": "Free calls value art",
+      "type": "rewrite",
+      "match": "^/images/money_lost\\.svg$",
+      "destination": "https://revo-free-account.vercel.app/images/money_lost.svg",
+      "enabled": true
+    }
+  ]
+}
