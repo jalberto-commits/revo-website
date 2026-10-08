@@ -32,6 +32,30 @@
     {
       "source": "/ai-answering-service/cost-of-missed-calls",
       "destination": "/ai-answering-service/cost-of-missed-calls.html"
+    },
+    {
+      "source": "/ai-answering-service/bilingual-answering",
+      "destination": "/ai-answering-service/bilingual-answering.html"
+    },
+    {
+      "source": "/ai-answering-service/answering-service-cost",
+      "destination": "/ai-answering-service/answering-service-cost.html"
+    },
+    {
+      "source": "/ai-answering-service/appointment-booking",
+      "destination": "/ai-answering-service/appointment-booking.html"
+    },
+    {
+      "source": "/ai-answering-service/overflow-answering",
+      "destination": "/ai-answering-service/overflow-answering.html"
+    },
+    {
+      "source": "/ai-answering-service/lead-qualification",
+      "destination": "/ai-answering-service/lead-qualification.html"
+    },
+    {
+      "source": "/ai-answering-service",
+      "destination": "/ai-answering-service.html"
     }
   ]
 }

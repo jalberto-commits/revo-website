@@ -58,6 +58,9 @@ const sitemapHas = path => read('sitemap.xml').includes(`<loc>https://www.revoap
 const homeLinks = () => [...read('index.html').match(/<nav data-revo-call-planning[^>]*>(.*?)<\/nav>/s)[1].matchAll(/href="([^"]+)"/g)].map(m => m[1]);
 
 try {
+  // The six-guide boundary fixture starts from five guides, independently of catalog growth.
+  const fixtureRegistry = join(work, 'seo/shared/data/landing-pages.json');
+  writeFileSync(fixtureRegistry, JSON.stringify(JSON.parse(readFileSync(fixtureRegistry, 'utf8')).slice(0, 5), null, 2) + '\n');
   step('install locked dependencies in the copy');
   run('npm', ['--prefix', 'seo/app', 'ci', '--no-audit', '--no-fund']);
 

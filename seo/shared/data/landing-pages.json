@@ -419,5 +419,445 @@
       "contentHash": "sha256:1f19bab11ebffe0109c2077443bbf7f8cf4e36ea4a0071311210dc926c501dc9",
       "note": "Editorial review in #43; published through #44 after Preview verification"
     }
+  },
+  {
+    "slug": "bilingual-answering",
+    "title": "Bilingual answering for home service businesses",
+    "description": "Plan English and Spanish call intake with a practical bilingual checklist, clear handoffs and realistic service expectations.",
+    "navigationLabel": "Bilingual answering",
+    "eyebrow": "English and Spanish",
+    "lead": "Give both languages the same clear next step.",
+    "intro": "A bilingual answering service should help callers explain their request and understand what happens next. For a US home service office, review the English and Spanish versions of your greeting, service boundaries and callback policy together.",
+    "sections": [
+      {
+        "title": "Start with the languages Revo publishes.",
+        "paragraphs": [
+          "Revo’s Services page describes English and Spanish support. This guide covers those two languages only. Confirm the language behavior and your business vocabulary with reviewed example calls before forwarding customer calls.",
+          "A translated greeting alone is not a complete intake policy. The caller still needs an accurate service-area check, an understandable next step and a way to reach your team when the request cannot be resolved."
+        ],
+        "items": []
+      },
+      {
+        "title": "Review an English and Spanish checklist.",
+        "paragraphs": [
+          "Have a fluent reviewer check meaning, names and tone in both versions. Keep the same business rules across languages."
+        ],
+        "items": [
+          "Greeting / Saludo: identify the business and ask the caller’s preferred language.",
+          "Service / Servicio: ask what work is requested; use your approved service names.",
+          "Location / Ubicación: confirm ZIP code and address against your actual service area.",
+          "Timing / Horario: ask about the preferred visit or callback window without promising availability.",
+          "Contact / Contacto: repeat the name and callback number to confirm them.",
+          "Next step / Próximo paso: explain whether this is a request or a confirmed appointment."
+        ]
+      },
+      {
+        "title": "Use a short illustrative handoff.",
+        "paragraphs": [
+          "Example only, not a customer recording: “What service do you need, and what is the property ZIP code?” / “¿Qué servicio necesita y cuál es el código postal de la propiedad?”",
+          "If the office must confirm availability: “Your request needs office confirmation; this is not yet a booked visit.” / “La oficina debe confirmar su solicitud; todavía no es una visita programada.” A fluent reviewer should adapt the wording to your approved policy."
+        ],
+        "items": []
+      },
+      {
+        "title": "Test the details that are easy to misunderstand.",
+        "paragraphs": [
+          "Try an address with a unit number, a caller switching languages and an existing customer changing an appointment. Check the summary your office receives against the caller’s intended request.",
+          "Keep any unresolved language or scheduling question for human review. English and Spanish support does not establish field availability, repair expertise or a particular integration."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does bilingual answering mean support for every language?",
+        "a": "No. This guide uses the English and Spanish support described on Revo’s Services page. Do not assume another language is available."
+      },
+      {
+        "q": "Should our English and Spanish scripts have different rules?",
+        "a": "The phrasing can differ, but the service area, availability and handoff expectations should match."
+      },
+      {
+        "q": "How should we handle a caller switching languages?",
+        "a": "Include that situation in your review calls and confirm the behavior before routing customers. Do not assume a language-switching result without testing."
+      }
+    ],
+    "related": [
+      "lead-qualification",
+      "appointment-booking",
+      "overflow-answering"
+    ],
+    "takeaway": "Give both languages the same clear next step.",
+    "pricingVariant": "missed-calls",
+    "sourcePaths": [
+      "https://www.revoapp.ai/services.html",
+      "https://www.revoapp.ai/pricing.html",
+      "seo/shared/lib/official-pricing.ts"
+    ],
+    "source": {
+      "kind": "manual",
+      "reference": "Authorized second October 8 batch; Sentinel_31743d7c0fe081918f57addac5d853c0; official Services and Pricing reviewed 2026-10-08 (batch 2026-10-08-second-five)"
+    },
+    "publicationStatus": "approved",
+    "review": {
+      "reviewer": "Codex, editorial review delegated by Sentinel_31743d7c0fe081918f57addac5d853c0",
+      "reviewedAt": "2026-10-08",
+      "contentHash": "sha256:2ade93a744e14771e43acc2a834658a813efb4cf5ba7283e0438d1eb2ba09e8b",
+      "note": "User authorized this specific second five-page batch and its editorial review. Atomic approval of mutually related pages; no authority for future batches."
+    }
+  },
+  {
+    "slug": "answering-service-cost",
+    "title": "Answering service cost: plan for minutes and coverage",
+    "description": "Compare answering service billing models, estimate monthly minutes and review plan limits alongside Revo’s official pricing.",
+    "navigationLabel": "Answering service cost",
+    "eyebrow": "Budget and coverage",
+    "lead": "Budget for the conversation and the work after it.",
+    "intro": "Answering service cost depends on the billing model, included usage and the responsibilities covered. Start with your call records and a current written offer rather than an assumed saving or a missed-call revenue estimate.",
+    "sections": [
+      {
+        "title": "Compare the billing model before the headline price.",
+        "paragraphs": [
+          "Providers can quote a monthly subscription with included minutes, a per-minute rate, a per-call package or a staffing arrangement. These are comparison categories, not claims about a particular competitor.",
+          "Ask what counts as billable time, how rounding works and whether transfers, short calls or follow-up use the allowance. Request the current terms for additional usage; do not infer an overage rate by dividing the monthly fee by included minutes."
+        ],
+        "items": [
+          "List the monthly base charge and included allowance.",
+          "Check additional usage, setup charges and cancellation terms in the actual offer.",
+          "Compare coverage hours and responsibilities as well as price."
+        ]
+      },
+      {
+        "title": "Estimate monthly minutes from your own records.",
+        "paragraphs": [
+          "For a planning scenario, multiply expected handled calls by their average handled duration. Example only: 40 calls × 2 minutes = 80 minutes for one month; 60 × 3 = 180 minutes. Neither example describes Revo traffic or customer results.",
+          "Separate new inquiries, existing customers and irrelevant calls. Use the provider’s billing rules to convert those categories into a billable estimate, and leave unknowns unresolved until the terms are confirmed."
+        ],
+        "items": [
+          "Use the same monthly period for call count and minutes.",
+          "Review a quieter and a busier month rather than one average alone.",
+          "Allow for longer calls, callbacks and the office work that remains."
+        ]
+      },
+      {
+        "title": "Read the current Revo plans and their feature limits.",
+        "paragraphs": [
+          "The plan block below comes from the shared official pricing data. Check the linked pricing page for the current offer and terms. The advertised launch discount is an offer, not a guaranteed permanent rate.",
+          "Solo does not include team transfers, WhatsApp follow-up, field-service software connections, recordings and transcripts, dedicated onboarding, training on your own calls, multiple numbers and locations, or an account manager. Crew adds the first five of those features, but excludes the last three. Fleet lists those additional features. Confirm that the supported setup fits your operation."
+        ],
+        "items": []
+      },
+      {
+        "title": "Keep subscription cost separate from opportunity value.",
+        "paragraphs": [
+          "This guide estimates the cost and usage of answering coverage. The separate cost-of-missed-calls worksheet explores potential gross job value under your own assumptions. It does not prove that a subscription recovers that value or pays for itself.",
+          "Include who reviews summaries, confirms requests and handles exceptions when comparing options. A lower monthly price does not establish an identical service scope."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is the monthly fee divided by minutes an overage rate?",
+        "a": "No. That arithmetic is not a contractual rate for extra usage. Ask for the current billing terms."
+      },
+      {
+        "q": "Can I estimate usage without historical call records?",
+        "a": "Use a clearly labeled range as a planning assumption, then replace it with observed call counts and durations. Do not treat it as measured usage."
+      },
+      {
+        "q": "Does this page calculate lost revenue?",
+        "a": "No. It covers answering service costs and minute planning. The separate worksheet addresses potential inquiry value under assumptions."
+      }
+    ],
+    "related": [
+      "cost-of-missed-calls",
+      "overflow-answering",
+      "appointment-booking"
+    ],
+    "takeaway": "Budget for the conversation and the work after it.",
+    "pricingVariant": "full",
+    "sourcePaths": [
+      "https://www.revoapp.ai/services.html",
+      "https://www.revoapp.ai/pricing.html",
+      "seo/shared/lib/official-pricing.ts"
+    ],
+    "source": {
+      "kind": "manual",
+      "reference": "Authorized second October 8 batch; Sentinel_31743d7c0fe081918f57addac5d853c0; official Services and Pricing reviewed 2026-10-08 (batch 2026-10-08-second-five)"
+    },
+    "publicationStatus": "approved",
+    "review": {
+      "reviewer": "Codex, editorial review delegated by Sentinel_31743d7c0fe081918f57addac5d853c0",
+      "reviewedAt": "2026-10-08",
+      "contentHash": "sha256:f6f3e0576859e2346dbd0209e714f4b5136ceb0b8eb3cc3107e489701f0f1b99",
+      "note": "User authorized this specific second five-page batch and its editorial review. Atomic approval of mutually related pages; no authority for future batches."
+    }
+  },
+  {
+    "slug": "appointment-booking",
+    "title": "AI appointment booking for home service calls",
+    "description": "Define booking rules, service-area checks and clear differences between a request, a confirmed appointment and technician dispatch.",
+    "navigationLabel": "Appointment booking",
+    "eyebrow": "Scheduling rules",
+    "lead": "Make the appointment status clear before the call ends.",
+    "intro": "An AI appointment booking flow needs more than a preferred date. Your office must decide which services can be scheduled, which times are available and what still requires a person’s confirmation.",
+    "sections": [
+      {
+        "title": "Separate three different outcomes.",
+        "paragraphs": [
+          "Revo’s published plans list appointment booking. A useful implementation still depends on the approved schedule, business rules and supported setup. No particular calendar or field-service integration is assumed in this guide."
+        ],
+        "items": [
+          "Appointment request: the caller shares a preferred window; availability has not been confirmed.",
+          "Confirmed appointment: an authorized slot has been accepted under your booking rules.",
+          "Dispatch: your operation assigns and sends a technician; a booking alone does not establish that action."
+        ]
+      },
+      {
+        "title": "Write the rules before opening the calendar.",
+        "paragraphs": [
+          "Define the service types, ZIP codes, duration allowances, working hours and buffer time your team actually supports. Decide which requests need an office review rather than immediate confirmation."
+        ],
+        "items": [
+          "Separate an estimate visit from a repair appointment.",
+          "Set policies for existing bookings, changes and cancellations.",
+          "Document who can confirm a slot and how exceptions reach that person.",
+          "Define the fallback when availability cannot be checked."
+        ]
+      },
+      {
+        "title": "Walk through an illustrative service request.",
+        "paragraphs": [
+          "A caller asks for a plumbing visit on Friday afternoon. The flow first checks that the requested work and property location fit your business, then collects contact details and a preferred window.",
+          "If the setup cannot confirm an authorized opening, the outcome stays a request: “The office will review your preferred window.” If a supported setup confirms a slot, restate the agreed date, time window and next step. This example is a proposed operating flow, not a verified Revo booking result."
+        ],
+        "items": []
+      },
+      {
+        "title": "Test exceptions as carefully as ordinary bookings.",
+        "paragraphs": [
+          "Review a full calendar, a caller outside the service area, a reschedule and an unavailable scheduling connection. Confirm that the caller hears the correct status and your office receives enough information to act.",
+          "Never use the flow to invent a repair price, diagnose a fault or promise emergency attendance. Those decisions remain within your approved service policy."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is a preferred time a confirmed booking?",
+        "a": "No. A preferred window is a request until your authorized process confirms availability."
+      },
+      {
+        "q": "Does booking mean a technician has been dispatched?",
+        "a": "No. Dispatch is a separate operational action involving assignment and field availability."
+      },
+      {
+        "q": "What happens if availability cannot be checked?",
+        "a": "Use the reviewed fallback: collect a request for office confirmation and explain that the visit is not yet confirmed."
+      }
+    ],
+    "related": [
+      "lead-qualification",
+      "bilingual-answering",
+      "after-hours",
+      "answering-service-cost"
+    ],
+    "takeaway": "Make the appointment status clear before the call ends.",
+    "pricingVariant": "missed-calls",
+    "sourcePaths": [
+      "https://www.revoapp.ai/services.html",
+      "https://www.revoapp.ai/pricing.html",
+      "seo/shared/lib/official-pricing.ts"
+    ],
+    "source": {
+      "kind": "manual",
+      "reference": "Authorized second October 8 batch; Sentinel_31743d7c0fe081918f57addac5d853c0; official Services and Pricing reviewed 2026-10-08 (batch 2026-10-08-second-five)"
+    },
+    "publicationStatus": "approved",
+    "review": {
+      "reviewer": "Codex, editorial review delegated by Sentinel_31743d7c0fe081918f57addac5d853c0",
+      "reviewedAt": "2026-10-08",
+      "contentHash": "sha256:5d3079600dc3a14367e412a3d3d468a9666e9a0fb2eee53b66a242bc35558128",
+      "note": "User authorized this specific second five-page batch and its editorial review. Atomic approval of mutually related pages; no authority for future batches."
+    }
+  },
+  {
+    "slug": "overflow-answering",
+    "title": "Overflow answering while your office is open",
+    "description": "Plan answering backup for busy office hours, with forwarding rules, intake details and ownership of follow-up when your team is occupied.",
+    "navigationLabel": "Overflow answering",
+    "eyebrow": "Office-hours backup",
+    "lead": "Keep a busy office from becoming an unclear next step.",
+    "intro": "Overflow answering provides a backup when your office is open but its usual staff cannot take the call. It addresses busy periods, overlapping calls and time spent helping customers already on the line.",
+    "sections": [
+      {
+        "title": "Define when the backup takes over.",
+        "paragraphs": [
+          "Revo’s Services page describes configurable answering timing, including answering after a few rings or during selected hours. Confirm how that behavior works with your phone provider and supported setup; no particular forwarding method is assumed.",
+          "Choose the trigger with your team: unanswered ringing, a busy line or a planned period of limited coverage. Overflow differs from after-hours coverage because the office remains open."
+        ],
+        "items": [
+          "Record the normal office hours and primary answering route.",
+          "Agree when backup should answer and how callers are greeted.",
+          "Check how the phone setup handles busy and unanswered calls."
+        ]
+      },
+      {
+        "title": "Keep the backup message consistent with the office.",
+        "paragraphs": [
+          "The caller should know whether they are leaving a service request, receiving confirmed scheduling information or waiting for a callback. Do not promise immediate access to a staff member just because the office is open.",
+          "For example, while the receptionist is assisting another customer, the backup can collect the requested service, property ZIP code and callback details under your approved policy. This is an illustrative intake scenario, not a measured reduction in missed calls."
+        ],
+        "items": []
+      },
+      {
+        "title": "Assign ownership of the return to your team.",
+        "paragraphs": [
+          "Decide who reviews overflow requests during the day, where that person checks them and how unresolved requests are tracked. A call summary is useful only if someone owns its next step.",
+          "Team transfers are excluded from Solo and included in Crew and Fleet in the shared official pricing data. A transfer entitlement does not establish that a person will answer; review the unavailable-person fallback."
+        ],
+        "items": [
+          "Avoid creating a second request when the caller contacts the office again.",
+          "Keep existing appointments separate from new service inquiries.",
+          "Use an approved callback window your staffing can support."
+        ]
+      },
+      {
+        "title": "Test the busy-period transition.",
+        "paragraphs": [
+          "Review a call while the office is already on another line, a call that the office answers before the backup trigger and a request that cannot be transferred. Confirm who handles each outcome.",
+          "Track handled requests and actual follow-up using your own records. Do not assume every overflow call is a qualified job or that backup coverage guarantees revenue."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is overflow answering the same as after-hours answering?",
+        "a": "No. Overflow backs up an open office when staff are busy. After-hours coverage follows the closed-office policy."
+      },
+      {
+        "q": "How many rings should pass before backup answers?",
+        "a": "Choose a timing rule with your team and confirm that your phone provider and answering setup support it. This guide does not prescribe a universal ring count."
+      },
+      {
+        "q": "Can every plan transfer an overflow call to staff?",
+        "a": "The shared official pricing data excludes transfers from Solo and includes them in Crew and Fleet. Confirm the supported setup and fallback before using transfers."
+      }
+    ],
+    "related": [
+      "after-hours",
+      "missed-calls",
+      "lead-qualification",
+      "answering-service-cost"
+    ],
+    "takeaway": "Keep a busy office from becoming an unclear next step.",
+    "pricingVariant": "missed-calls",
+    "sourcePaths": [
+      "https://www.revoapp.ai/services.html",
+      "https://www.revoapp.ai/pricing.html",
+      "seo/shared/lib/official-pricing.ts"
+    ],
+    "source": {
+      "kind": "manual",
+      "reference": "Authorized second October 8 batch; Sentinel_31743d7c0fe081918f57addac5d853c0; official Services and Pricing reviewed 2026-10-08 (batch 2026-10-08-second-five)"
+    },
+    "publicationStatus": "approved",
+    "review": {
+      "reviewer": "Codex, editorial review delegated by Sentinel_31743d7c0fe081918f57addac5d853c0",
+      "reviewedAt": "2026-10-08",
+      "contentHash": "sha256:2b0622936b1c6b73075c9c2675f9ee58f50e363606776500ce0e283fddaf79d7",
+      "note": "User authorized this specific second five-page batch and its editorial review. Atomic approval of mutually related pages; no authority for future batches."
+    }
+  },
+  {
+    "slug": "lead-qualification",
+    "title": "Answering service lead qualification and intake",
+    "description": "Build service, location, timing and contact intake for home service calls, with clear qualification criteria and an accountable handoff.",
+    "navigationLabel": "Lead qualification",
+    "eyebrow": "Service intake",
+    "lead": "Collect enough context for your team to decide.",
+    "intro": "Lead qualification for a home service answering flow means checking whether an inquiry fits your services and area, then passing useful context to the people who can act. It is not a technical diagnosis or a promise that the caller will buy.",
+    "sections": [
+      {
+        "title": "Define fit with observable intake questions.",
+        "paragraphs": [
+          "Revo’s Services page describes lead qualification and intake. Translate that broad capability into your own reviewed questions and acceptance rules before routing calls."
+        ],
+        "items": [
+          "Service: what work is the caller requesting, in their own words?",
+          "Area: what ZIP code and property address need service?",
+          "Timing: when is help requested, and what availability still needs confirmation?",
+          "Contact: who should your team call back, and at what number?",
+          "Context: is this a new inquiry, an existing appointment or an unresolved customer issue?"
+        ]
+      },
+      {
+        "title": "Keep qualification separate from diagnosis and pricing.",
+        "paragraphs": [
+          "A caller saying “the AC is not cooling” provides a service request, not a confirmed fault. Record that description without converting it into a diagnosis or an invented repair price.",
+          "If a request is outside your services or area, follow your approved explanation. If the details are unclear, preserve the uncertainty for your office rather than forcing a qualified label."
+        ],
+        "items": []
+      },
+      {
+        "title": "Make the handoff actionable.",
+        "paragraphs": [
+          "An illustrative summary might read: “New HVAC inquiry; property ZIP provided; caller requests a weekday visit; callback number confirmed; availability pending office review.” This is an example format, not a Revo customer record.",
+          "Assign an owner to review the request and document which supported route delivers it. Solo lists call summaries but excludes team transfers and field-service software connections; Crew and Fleet include those features. Do not assume a named integration or an automatic dispatch."
+        ],
+        "items": [
+          "Include the caller’s requested work and any unresolved question.",
+          "State whether the result is intake only or a confirmed appointment.",
+          "Define a fallback when the responsible person is unavailable."
+        ]
+      },
+      {
+        "title": "Review the borderline inquiries.",
+        "paragraphs": [
+          "Test an out-of-area property, a vague service request, a repeat caller and an existing customer reporting a problem. Check that your team can distinguish them without relying on invented information.",
+          "Use your own records to measure which inquiries fit and what happens afterward. Search-volume estimates and intake counts are not qualified Revo leads, completed jobs or measured conversion gains."
+        ],
+        "items": []
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Does a qualified inquiry guarantee a booked job?",
+        "a": "No. Qualification checks fit under your business rules. Availability, customer choice and office follow-up still affect the outcome."
+      },
+      {
+        "q": "Should the answering flow estimate a repair price?",
+        "a": "Only use an explicitly approved pricing policy where supported. Do not invent a repair quote from an intake description."
+      },
+      {
+        "q": "What if the caller cannot describe the problem clearly?",
+        "a": "Collect their description and contact details, mark the uncertainty and route it for human review according to your policy."
+      }
+    ],
+    "related": [
+      "appointment-booking",
+      "bilingual-answering",
+      "overflow-answering"
+    ],
+    "takeaway": "Collect enough context for your team to decide.",
+    "pricingVariant": "missed-calls",
+    "sourcePaths": [
+      "https://www.revoapp.ai/services.html",
+      "https://www.revoapp.ai/pricing.html",
+      "seo/shared/lib/official-pricing.ts"
+    ],
+    "source": {
+      "kind": "manual",
+      "reference": "Authorized second October 8 batch; Sentinel_31743d7c0fe081918f57addac5d853c0; official Services and Pricing reviewed 2026-10-08 (batch 2026-10-08-second-five)"
+    },
+    "publicationStatus": "approved",
+    "review": {
+      "reviewer": "Codex, editorial review delegated by Sentinel_31743d7c0fe081918f57addac5d853c0",
+      "reviewedAt": "2026-10-08",
+      "contentHash": "sha256:ca85fe8da4e5e04df18bfef219c702145d336e85db8727e9b59234b2e5a492db",
+      "note": "User authorized this specific second five-page batch and its editorial review. Atomic approval of mutually related pages; no authority for future batches."
+    }
   }
 ]

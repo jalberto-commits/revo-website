@@ -8,6 +8,8 @@ import { homeNavigation, publicRoutes, seoRewrites, withSeoRewrites, INDEX_PATH 
 import { importGeneratorExport } from '../../app/tools/generator-adapter.mjs';
 
 const REGISTRY = JSON.parse(readFileSync(new URL('../data/landing-pages.json', import.meta.url), 'utf8'));
+// Isolate mutation and navigation fixtures from the growing production catalog.
+const FIXTURE_REGISTRY = REGISTRY.slice(0, 5);
 const CONFIG = { navigationLimit: 6 };
 const strip = ({ publicationStatus, review, withdrawal, ...record }) => record;
 
@@ -94,22 +96,22 @@ test('batches: add lands as draft, re-applying is a no-op, approval is a separat
 });
 
 test('batches cannot approve, update resets review, withdraw keeps history', () => {
-  assert.throws(() => applyBatch(REGISTRY, batch('2026-10-09-sneaky', [{ op: 'add', record: { ...draftRecord('sneaky', 14), publicationStatus: 'approved' } }])), /cannot set publicationStatus/);
-  assert.throws(() => applyBatch(REGISTRY, batch('2026-10-09-twice', [{ op: 'add', record: draftRecord('twice', 15) }, { op: 'withdraw', slug: 'twice', reason: 'x' }])), /each slug once/);
-  assert.throws(() => applyBatch(REGISTRY, batch('2026-10-09-clash', [{ op: 'add', record: { ...strip(REGISTRY[0]), lead: 'Different' } }])), /already exists with other content/);
+  assert.throws(() => applyBatch(FIXTURE_REGISTRY, batch('2026-10-09-sneaky', [{ op: 'add', record: { ...draftRecord('sneaky', 14), publicationStatus: 'approved' } }])), /cannot set publicationStatus/);
+  assert.throws(() => applyBatch(FIXTURE_REGISTRY, batch('2026-10-09-twice', [{ op: 'add', record: draftRecord('twice', 15) }, { op: 'withdraw', slug: 'twice', reason: 'x' }])), /each slug once/);
+  assert.throws(() => applyBatch(FIXTURE_REGISTRY, batch('2026-10-09-clash', [{ op: 'add', record: { ...strip(FIXTURE_REGISTRY[0]), lead: 'Different' } }])), /already exists with other content/);
 
-  const update = batch('2026-10-09-update', [{ op: 'update', slug: REGISTRY[0].slug, record: { ...strip(REGISTRY[0]), takeaway: REGISTRY[0].takeaway + ' Updated.' } }]);
-  const updated = applyBatch(REGISTRY, update).registry[0];
+  const update = batch('2026-10-09-update', [{ op: 'update', slug: FIXTURE_REGISTRY[0].slug, record: { ...strip(FIXTURE_REGISTRY[0]), takeaway: FIXTURE_REGISTRY[0].takeaway + ' Updated.' } }]);
+  const updated = applyBatch(FIXTURE_REGISTRY, update).registry[0];
   assert.equal(updated.publicationStatus, 'draft');
   assert.equal(updated.review, undefined);
 
-  const withdraw = batch('2026-10-09-withdraw', [{ op: 'withdraw', slug: REGISTRY[1].slug, reason: 'Superseded' }]);
-  const { registry: withdrawn } = applyBatch(REGISTRY, withdraw, { date: '2026-10-09' });
+  const withdraw = batch('2026-10-09-withdraw', [{ op: 'withdraw', slug: FIXTURE_REGISTRY[1].slug, reason: 'Superseded' }]);
+  const { registry: withdrawn } = applyBatch(FIXTURE_REGISTRY, withdraw, { date: '2026-10-09' });
   assert.equal(withdrawn[1].publicationStatus, 'withdrawn');
   assert.deepEqual(withdrawn[1].withdrawal, { reason: 'Superseded', at: '2026-10-09', batchId: '2026-10-09-withdraw' });
   assert.deepEqual(applyBatch(withdrawn, withdraw).changes, []);
-  assert.throws(() => approvePage(withdrawn, REGISTRY[1].slug, { reviewer: 'R' }), /reinstate/);
-  assert.equal(approvePage(withdrawn, REGISTRY[1].slug, { reviewer: 'R', reinstate: true })[1].publicationStatus, 'approved');
+  assert.throws(() => approvePage(withdrawn, FIXTURE_REGISTRY[1].slug, { reviewer: 'R' }), /reinstate/);
+  assert.equal(approvePage(withdrawn, FIXTURE_REGISTRY[1].slug, { reviewer: 'R', reinstate: true })[1].publicationStatus, 'approved');
 });
 
 test('batch log and release record are idempotent', () => {
@@ -126,8 +128,8 @@ test('batch log and release record are idempotent', () => {
 
 test('routes, sitemap set and navigation come from the approved records only', () => {
   const sixth = { ...draftRecord('weekend-calls', 6), publicationStatus: 'draft' };
-  const withDraft = [...REGISTRY, sixth];
-  assert.deepEqual(publicRoutes(withDraft, CONFIG), publicRoutes(REGISTRY, CONFIG), 'a draft adds no route');
+  const withDraft = [...FIXTURE_REGISTRY, sixth];
+  assert.deepEqual(publicRoutes(withDraft, CONFIG), publicRoutes(FIXTURE_REGISTRY, CONFIG), 'a draft adds no route');
 
   const sixApproved = approvePage(withDraft, 'weekend-calls', { reviewer: 'R', date: '2026-10-09' });
   assert.ok(publicRoutes(sixApproved, CONFIG).includes('/ai-answering-service/weekend-calls'));
