@@ -1,32 +1,80 @@
-# Five-page source integration
+# SEO/AEO guides: publication workflow
 
-This source integration adds five reviewed landing pages to the existing static website. It is proposed as a draft PR; merging and deployment are separate decisions. `seo/shared/data/landing-pages.json` is the single registry for content, page paths, pricing variants, navigation and the manually reviewed release status. `seo/shared/components/LandingPageTemplate.tsx` renders both modes; the review wrapper supplies its explicitly simulated form. The public app imports the shared component directly and supplies no form. No JSX is transformed during the build.
+The `/ai-answering-service/...` guides are static pages built into the existing site. The build exports every approved page with Next.js (`output: 'export'`), copies the original website unchanged into `.seo-dist`, and adds only the guides, their routes, sitemap URLs and homepage links. No server, form or lead capture is added. `acquisitionEnabled: false` in `seo/app/site.config.json` keeps the guides content-only: no signup, free-test or App Store links, and no form.
 
-Run from the website root with existing installed dependencies:
+## Daily runbook
 
-```
-npm run seo:test
-npm run seo:build
-npm run seo:verify
-```
+Each batch is one branch and one pull request. Merging and publishing stay with a maintainer.
 
-On a fresh checkout, install the locked app dependencies first with `npm --prefix seo/app ci`. That installation was not run during local acceptance. The root `build` script contains that normal clean-checkout step. This PR does not create a GitHub Actions workflow: the current OAuth session lacks the `workflow` permission. Tests and build verification can be run manually with the commands above. A maintainer can add CI separately using read-only repository permissions and no production secrets; do not use a production-secret-bearing pull_request_target job.
+1. **Branch from main.** The branch name must start with `seo/`, for example `seo/2026-10-09-weekend-guides`. Vercel deploys `seo/` branches into the isolated `seo-review` environment.
+2. **Bring in reviewed content.**
+   - From the generator: `npm run seo -- import <export.json> --batch-id 2026-10-09-name --source-ref "<where it came from>"`. This writes `seo/shared/data/batches/<batchId>.json`.
+   - By hand: write that batch file yourself, with `add`, `update` and `withdraw` operations.
+   - Then `npm run seo -- apply seo/shared/data/batches/<batchId>.json`. Added and changed pages become **drafts**. Applying the same batch again changes nothing.
+3. **Editorial review and approval, on the branch.** Editors read the drafts in the batch file or the registry diff. For each page they accept, run `npm run seo -- approve <slug> --reviewer "<name>"`. Approval records the reviewer, the date and the hash of the exact content. Any later edit makes the page fail validation until it is approved again. Drafts never appear on any build. Approved pages appear on this branch's Preview for a final visual check, and reach production only when a maintainer merges.
+4. **Routes.** Run `npm run seo:routes`. It regenerates the guide rewrites in `vercel.json` from the approved pages and keeps every other route. Commit everything.
+5. **Pull request into main.** Two checks must pass:
+   - The required `seo-ci` check: validate, route check, build, tests, verify and the fixture end-to-end run.
+   - The Vercel Preview, built in `seo-review`.
+6. **Preview review.** Open the Preview, logged in to Vercel. Check the new pages on desktop and mobile with GET only: never submit a form there.
+7. **Maintainer merges.** Use a merge commit. Vercel builds production from main with Production variables.
+8. **Verify production.** Check the new URLs, sitemap, homepage, Pricing, Services and funnels on www.revoapp.ai. Then record the release with `npm run seo -- record-release --sha <merge sha> --deployment <dpl_...> --batch <batchId>` in a follow-up commit.
 
-`seo/app/site.config.json` uses relative paths. The builder cleans generated app output and `.seo-dist`, copies the allowlisted existing website assets, exports the five approved routes, and adds their navigation and sitemap entries to generated output only. Source `index.html`, `sitemap.xml`, API functions and existing marketing assets remain unchanged. The release manifest stays in `seo/app/.release`, outside the static output. Internal SQL, Markdown, API sources and SEO source modules are excluded from `.seo-dist`.
+The Vercel build itself runs, in order, and stops on the first failure:
 
-The first release is content only. `acquisitionEnabled: false` in `seo/app/site.config.json` is passed explicitly to the shared header, page renderer and consent component. Public CTAs navigate to plan details, guides or the worksheet. There are no signup, free-test or App Store links or forms on the five new pages, including mobile navigation. Campaign attribution is not persisted and acquisition clicks are not emitted in this mode. The frontend worksheet submits no data. Enabling the flag later restores the reviewed acquisition components and requires separate acceptance and approval.
+1. Isolation probe
+2. `npm ci`
+3. Registry validation
+4. Route check
+5. Static build
+6. Tests
+7. Verification
 
-Preview isolation remains a release blocker. The existing root APIs can write leads, send Resend email and forward to a default CRM webhook when effective Preview credentials are available. Excluding API source from the static output does not prove Vercel will exclude root API functions. The Next child process uses an environment allowlist, but the parent dependency installation and API runtime can inherit Preview variables. Removing acquisition links does not isolate those paths.
+## The contract
 
-Before authorizing this fork deployment, an administrator must confirm branch-specific Preview isolation: empty/absent SUPABASE_URL and SUPABASE_ANON_KEY, empty/absent RESEND_API_KEY, and explicitly empty GHL_WEBHOOK_URL (an absent variable falls back to the existing default webhook). SALES_EMAIL is unnecessary for these static pages. Do not alter Production or other branches. If branch-scoped isolation cannot be established, request separate authorization for a narrow Preview-only API guard; this PR leaves existing APIs untouched. No environment values were inspected or changed. Deployment, payments and real lead testing remain outside this change.
+The registry is `seo/shared/data/landing-pages.json`. It is the only source the build publishes from, and `seo/shared/lib/registry-contract.mjs` defines the contract.
 
-The six existing funnel rewrites are project-level settings recorded in `seo/shared/data/funnel-routing-contract.json`; they are not overwritten by the five new file rewrites in `vercel.json`. Local acceptance exercises fixtures for those six mappings. Actual remote routing, backend function discovery, lead persistence, analytics ingestion and payments still require an authorized staging acceptance run. No vendor funnel consent is inferred from the SEO consent choice.
+- **Required fields:** `slug`, `title` (10–62 characters, published as "<title> | Revo"), `description` (50–160), `navigationLabel`, `eyebrow`, `lead`, `intro`, `sections`, `faqs`, `takeaway`, `pricingVariant`, `sourcePaths` (where the content came from) and `publicationStatus`.
+- **Statuses:**
+  - `draft` is never public.
+  - `approved` is public. It needs `source` and `review { reviewer, reviewedAt, contentHash }` that matches the content.
+  - `withdrawn` is removed from the output and needs `withdrawal { reason, at }`. The record stays for history.
+- **Uniqueness:** slugs are unique. Titles, descriptions and navigation labels are unique among pages that are not withdrawn.
+- **Assets:** every image the record names (`image`, or a site path inside its text) must exist in the site.
+- **Related links:** each page shows at most 4 related guides, from its own `related` list or the nearest approved pages.
+- **Homepage navigation:** it links the first `navigationLimit` guides, 6 by default. Beyond that it links the generated guide index, `/ai-answering-service`.
+- **Records:** `seo/shared/data/batches/` holds the applied batches. `batch-log.json` holds the applied batch ids and their hashes. `releases.json` maps each published commit to its deployment.
 
-Rollback: after a future merge, revert the integration commit (or its merge commit using the appropriate parent). An equivalent source rollback restores `package.json`, `vercel.json` and `.gitignore` from the reviewed base commit `7286051ee492214def8bf35f98cef96d1ca6ccbb`, and removes only this integration's added `seo/` tree. Remove generated `.seo-dist/` and `.seo-dist.building/` before a baseline rebuild. Preserve all other workflows and website files. Redeployment is a separate authorized action. A temporary local rollback restored all 501 captured baseline source hashes; 498 source files, including existing API sources, had remained unchanged before rollback.
+The generator, including any Supabase table it uses, is **not connected** and has no schedule here. `seo/shared/data/generator-mapping.json` names which export column feeds which field, and starts as an identity mapping. Confirm it against a real export before the first import. Imports never carry an approval.
 
-Confirmed local acceptance: project checks, typecheck, lint, 85 tests in the related PSEO project, four shared behavior tests runnable in this checkout, fresh public build/verification, a build relocated to a temporary source folder with no absolute Mac paths, removal of four injected obsolete output artifacts, and 51 browser checks covering five routes at 320/390/768/1440, metadata, navigation, consent, UTM encoding and persistence, origin referrer, deduplication, storage failure and GPC. Generated Next build IDs are not claimed bit-identical between builds.
+## Previews and isolation
 
+- **Branch routing.** Branches starting with `seo/` deploy into the Vercel custom environment `seo-review`. Its only variables are `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `RESEND_API_KEY` and `GHL_WEBHOOK_URL`, all set to empty strings. `GHL_WEBHOOK_URL` must stay explicitly empty, because when it is absent the API falls back to its default webhook.
+- **Isolation probe.** It prints `set`, `empty` or `unset` for each of those variables at the start of every build, never a value. A `seo-review` build with one of them set fails.
+- **Fork pull requests** keep Vercel's fork protection: a maintainer authorizes them, or copies the commits to an internal `seo/` branch.
+- **Not isolated by variables:** the dashboard rule that rewrites `/api/leads` to the external funnel app (`revo-free-account.vercel.app`). Project-level rules run before the deployment's routes on every host, Previews included. Previews are behind Vercel Authentication and the guides contain no form. Still, never POST to `/api/leads` on a Preview. Restricting that rule to the production hosts is a separate decision for the owner of the funnel app.
 
-## Staging review before release
+## Checks
 
-Review the five content pages at desktop/mobile widths, canonical host, sitemap and footer links, pricing features, worksheet validation and working editorial anchors. Confirm no forms or signup/onboarding links exist, including the expanded mobile menu, and no acquisition attribution is stored even after analytics consent. Confirm branch-scoped Preview isolation before approving Vercel. Existing website regression, remote API discovery and deployment authorization are separate checks. Historical 51-browser and 85-related-project results above concern the earlier acquisition-enabled source; they do not validate this content-only revision. Google indexing, analytics ingestion and SEO results are not established by local checks.
+- `npm run seo:validate`: the registry contract.
+- `npm run seo:routes:check`: whether `vercel.json` matches the approved pages. CI fails on drift, because Vercel reads routes from the committed file.
+- `npm run seo:test`: unit and rendering tests.
+- `npm run seo:verify`: checks a built `.seo-dist` by invariant:
+  - output hashes, and original images unchanged;
+  - canonical and indexability;
+  - the sitemap and navigation equal the approved set;
+  - drafts and withdrawn pages are absent;
+  - every internal link and anchor resolves;
+  - related links are capped;
+  - none of the 10 dashboard rules (`seo/shared/data/funnel-routing-contract.json`) shadows a route or file.
+- `npm run seo:fixtures`: runs the whole workflow in a throwaway copy of the site. It covers a sixth approved page, a draft that stays out, the index appearing on growth, and a withdrawal that cleans the output. Fixtures live in `seo/shared/fixtures` and are never published.
+
+`.github/workflows/seo-ci.yml` runs these on every pull request into main. It uses `pull_request` (not `pull_request_target`), a read-only token and no secrets. Branch protection on main requires the `seo-ci` check.
+
+## Rollback
+
+In Vercel, use **Instant Rollback** to the previous production deployment. The release log in `releases.json` lists deployments by commit. Then revert the merge on main (`git revert -m 1 <merge sha>`) and let main build again.
+
+After an Instant Rollback, Vercel stops assigning production domains to new deployments until the rollback is undone. Check that the next merge reaches www.revoapp.ai, and promote it if it does not.
+
+The first release (#44, commit `ccaf022`, deployment `dpl_9afD8wBeKWWZXN47DRL4vptu3miY`) replaced `dpl_8LoNEotLoTmH6j7chCGr5DLarfos` (commit `0df203c`).

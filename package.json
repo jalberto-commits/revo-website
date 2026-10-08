@@ -5,10 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vercel dev",
-    "build": "npm --prefix seo/app ci && npm --prefix seo/app run build:site && npm --prefix seo/app test && npm --prefix seo/app run verify:site",
+    "build": "node seo/app/tools/isolation-probe.mjs && npm --prefix seo/app ci && npm run seo:validate && npm run seo:routes:check && npm --prefix seo/app run build:site && npm --prefix seo/app test && npm --prefix seo/app run verify:site",
+    "seo": "node seo/app/tools/seo.mjs",
+    "seo:validate": "node seo/app/tools/seo.mjs validate",
+    "seo:routes": "node seo/app/tools/generate-routes.mjs",
+    "seo:routes:check": "node seo/app/tools/generate-routes.mjs --check",
     "seo:build": "npm --prefix seo/app run build:site",
     "seo:verify": "npm --prefix seo/app run verify:site",
-    "seo:test": "npm --prefix seo/app test"
+    "seo:test": "npm --prefix seo/app test",
+    "seo:fixtures": "node seo/app/tools/fixture-e2e.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0"

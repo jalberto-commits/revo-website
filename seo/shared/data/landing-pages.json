@@ -15,7 +15,7 @@
       {
         "title": "Answering a call and attending a job are different decisions.",
         "paragraphs": [
-          "Revo\u2019s published pricing page lists 24/7 answering in its Launch Offer. That describes phone coverage; it does not establish your company\u2019s service hours, response time or emergency availability.",
+          "Revo’s published pricing page lists 24/7 answering in its Launch Offer. That describes phone coverage; it does not establish your company’s service hours, response time or emergency availability.",
           "Before forwarding customer calls, review the proposed flow with your team and test it against the hours and services you actually provide."
         ],
         "items": [
@@ -65,7 +65,17 @@
     "takeaway": "One after-hours page covers the commercial intent previously split between after-hours and 24/7 material.",
     "pricingVariant": "full",
     "navigationLabel": "After-hours answering",
-    "publicationStatus": "approved"
+    "publicationStatus": "approved",
+    "source": {
+      "kind": "manual",
+      "reference": "jd90983/revo-website#43"
+    },
+    "review": {
+      "reviewer": "jalberto-commits",
+      "reviewedAt": "2026-10-07",
+      "contentHash": "sha256:85b8d44e6a0bb33de54e7c1309ddc71be9447036a9b417394b27af7c79becca5",
+      "note": "Editorial review in #43; published through #44 after Preview verification"
+    }
   },
   {
     "slug": "missed-calls",
@@ -94,7 +104,7 @@
         "title": "Match the response to the reason you missed the call.",
         "paragraphs": [
           "A useful fix depends on the gap: an unclear voicemail greeting, inconsistent office coverage or a missing follow-up owner. AI answering is one option to evaluate alongside voicemail and human reception.",
-          "Revo\u2019s published offer lists answering and call summaries. Confirm the call flow you need through review and testing; this page does not claim that every caller will book or that no calls can ever be missed."
+          "Revo’s published offer lists answering and call summaries. Confirm the call flow you need through review and testing; this page does not claim that every caller will book or that no calls can ever be missed."
         ],
         "items": [
           "If you are busy on-site, review how a caller can leave a usable request.",
@@ -132,7 +142,17 @@
     "takeaway": "Process diagnosis and follow-up are the focus; no loss rate, conversion uplift or customer outcome is asserted.",
     "pricingVariant": "missed-calls",
     "navigationLabel": "Missed calls",
-    "publicationStatus": "approved"
+    "publicationStatus": "approved",
+    "source": {
+      "kind": "manual",
+      "reference": "jd90983/revo-website#43"
+    },
+    "review": {
+      "reviewer": "jalberto-commits",
+      "reviewedAt": "2026-10-07",
+      "contentHash": "sha256:4cf72aed9752ad51e326320ac53d096ca7d216ae23d3895ccc2973c3b0dd6f6c",
+      "note": "Editorial review in #43; published through #44 after Preview verification"
+    }
   },
   {
     "slug": "compare/ai-vs-voicemail",
@@ -187,7 +207,7 @@
       {
         "title": "Compare the operating work as well as the subscription.",
         "paragraphs": [
-          "Voicemail needs a current greeting and someone to review messages. AI answering needs a reviewed configuration and someone to handle exceptions and requests. Neither removes your responsibility for the customer\u2019s next step.",
+          "Voicemail needs a current greeting and someone to review messages. AI answering needs a reviewed configuration and someone to handle exceptions and requests. Neither removes your responsibility for the customer’s next step.",
           "Use your actual phone plan and the current answering offer when comparing costs. This page does not assume voicemail is free or that AI will pay for itself."
         ],
         "items": []
@@ -211,7 +231,7 @@
       },
       {
         "q": "Does AI answering guarantee a booking?",
-        "a": "No. A booking depends on the supported configuration, availability and the caller\u2019s request. Evaluate those details rather than assuming an outcome."
+        "a": "No. A booking depends on the supported configuration, availability and the caller’s request. Evaluate those details rather than assuming an outcome."
       },
       {
         "q": "Can I compare both before changing my phone setup?",
@@ -221,7 +241,17 @@
     "takeaway": "Balanced option comparison; no competitor statistics or guaranteed outcomes.",
     "pricingVariant": "voicemail",
     "navigationLabel": "AI vs voicemail",
-    "publicationStatus": "approved"
+    "publicationStatus": "approved",
+    "source": {
+      "kind": "manual",
+      "reference": "jd90983/revo-website#43"
+    },
+    "review": {
+      "reviewer": "jalberto-commits",
+      "reviewedAt": "2026-10-07",
+      "contentHash": "sha256:cef29d8fb344780cdc504edd800a357848fbd7f95113378d4e91f5fb25c58def",
+      "note": "Editorial review in #43; published through #44 after Preview verification"
+    }
   },
   {
     "slug": "compare/ai-vs-live-receptionist",
@@ -245,8 +275,8 @@
         ],
         [
           "Coverage",
-          "Depends on staffing or the provider\u2019s agreed hours.",
-          "Depends on the answering service\u2019s supported coverage and setup."
+          "Depends on staffing or the provider’s agreed hours.",
+          "Depends on the answering service’s supported coverage and setup."
         ],
         [
           "Complex requests",
@@ -278,7 +308,7 @@
         "title": "Define the handoff before choosing coverage.",
         "paragraphs": [
           "List the calls your business wants a person to handle and agree how those requests reach someone. Do not assume an integration, transfer or dispatch feature is available merely because it would be useful.",
-          "Revo\u2019s published offer provides a starting point for pricing. Review the actual supported workflow with your team and confirm the details of the plan you are considering."
+          "Revo’s published offer provides a starting point for pricing. Review the actual supported workflow with your team and confirm the details of the plan you are considering."
         ],
         "items": []
       },
@@ -312,7 +342,17 @@
     "takeaway": "Balanced operating comparison; no salary estimate, superiority claim or unverified integration.",
     "pricingVariant": "receptionist",
     "navigationLabel": "AI vs receptionist",
-    "publicationStatus": "approved"
+    "publicationStatus": "approved",
+    "source": {
+      "kind": "manual",
+      "reference": "jd90983/revo-website#43"
+    },
+    "review": {
+      "reviewer": "jalberto-commits",
+      "reviewedAt": "2026-10-07",
+      "contentHash": "sha256:f91e3d4ff7b5ff7cdea82749fb414e59d570529f5fac49a343b86a930c961ceb",
+      "note": "Editorial review in #43; published through #44 after Preview verification"
+    }
   },
   {
     "slug": "cost-of-missed-calls",
@@ -330,7 +370,7 @@
         "title": "Define what belongs in the calculation.",
         "paragraphs": [
           "Use service inquiries rather than all phone calls. Existing customers, spam and wrong numbers should not be counted as new job opportunities. If you do not know the values, leave the inputs blank instead of inventing a baseline.",
-          "The formula is unanswered qualified inquiries \u00d7 assumed booking probability \u00d7 assumed average job value for one chosen period. It estimates potential gross job value under those assumptions; it is not cash collected or profit."
+          "The formula is unanswered qualified inquiries × assumed booking probability × assumed average job value for one chosen period. It estimates potential gross job value under those assumptions; it is not cash collected or profit."
         ],
         "items": []
       },
@@ -368,6 +408,16 @@
     "takeaway": "Distinct from missed-calls: user-entered scenario math and interpretation, rather than call-handling diagnosis.",
     "pricingVariant": "worksheet",
     "navigationLabel": "Cost of missed calls",
-    "publicationStatus": "approved"
+    "publicationStatus": "approved",
+    "source": {
+      "kind": "manual",
+      "reference": "jd90983/revo-website#43"
+    },
+    "review": {
+      "reviewer": "jalberto-commits",
+      "reviewedAt": "2026-10-07",
+      "contentHash": "sha256:1f19bab11ebffe0109c2077443bbf7f8cf4e36ea4a0071311210dc926c501dc9",
+      "note": "Editorial review in #43; published through #44 after Preview verification"
+    }
   }
 ]

@@ -1,0 +1,17 @@
+[
+  {
+    "sha": "ccaf02287ad9b8a41c1f7f6af0d73e12cb8130bd",
+    "deploymentId": "dpl_9afD8wBeKWWZXN47DRL4vptu3miY",
+    "publishedAt": "2026-10-08",
+    "batchIds": [
+      "2026-10-07-initial-five"
+    ],
+    "routes": [
+      "/ai-answering-service/after-hours",
+      "/ai-answering-service/missed-calls",
+      "/ai-answering-service/compare/ai-vs-voicemail",
+      "/ai-answering-service/compare/ai-vs-live-receptionist",
+      "/ai-answering-service/cost-of-missed-calls"
+    ]
+  }
+]
