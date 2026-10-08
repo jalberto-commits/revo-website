@@ -542,7 +542,7 @@
       {
         "title": "Read the current Revo plans and their feature limits.",
         "paragraphs": [
-          "The plan block below comes from the shared official pricing data. Check the linked pricing page for the current offer and terms. The advertised launch discount is an offer, not a guaranteed permanent rate.",
+          "The plan block below comes from the shared official pricing data. Check the linked pricing page for the current offer and terms. Review the current Launch Offer terms, including eligibility and how long your rate applies.",
           "Solo does not include team transfers, WhatsApp follow-up, field-service software connections, recordings and transcripts, dedicated onboarding, training on your own calls, multiple numbers and locations, or an account manager. Crew adds the first five of those features, but excludes the last three. Fleet lists those additional features. Confirm that the supported setup fits your operation."
         ],
         "items": []
@@ -588,10 +588,10 @@
     },
     "publicationStatus": "approved",
     "review": {
-      "reviewer": "Codex, editorial review delegated by Sentinel_31743d7c0fe081918f57addac5d853c0",
+      "reviewer": "Codex, user-delegated editorial correction for PR46",
       "reviewedAt": "2026-10-08",
-      "contentHash": "sha256:f6f3e0576859e2346dbd0209e714f4b5136ceb0b8eb3cc3107e489701f0f1b99",
-      "note": "User authorized this specific second five-page batch and its editorial review. Atomic approval of mutually related pages; no authority for future batches."
+      "contentHash": "sha256:00071a0ff36b99e995e3446f2923e723ef6845e6df64c925b6ff075d0e853fed",
+      "note": "User authorized the neutral Launch Offer clarification recommended by independent editorial review; atomic update/reapproval preserves related guides and existing approvals."
     }
   },
   {

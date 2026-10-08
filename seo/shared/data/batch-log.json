@@ -24,5 +24,17 @@
       "added overflow-answering as draft",
       "added lead-qualification as draft"
     ]
+  },
+  {
+    "batchId": "2026-10-08-second-five-offer-clarification",
+    "batchHash": "sha256:224bd0c1ed5a19158306855d72dca3bdab648a43ebfc562cad540eadb83dd9cc",
+    "source": {
+      "kind": "manual",
+      "reference": "Authorized PR46 editorial correction from independent review; neutral Launch Offer terms wording"
+    },
+    "appliedAt": "2026-10-08",
+    "changes": [
+      "updated answering-service-cost; back to draft until re-approved"
+    ]
   }
 ]

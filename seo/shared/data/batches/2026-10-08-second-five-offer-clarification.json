@@ -1,0 +1,93 @@
+{
+  "batchId": "2026-10-08-second-five-offer-clarification",
+  "source": {
+    "kind": "manual",
+    "reference": "Authorized PR46 editorial correction from independent review; neutral Launch Offer terms wording"
+  },
+  "operations": [
+    {
+      "op": "update",
+      "record": {
+        "slug": "answering-service-cost",
+        "title": "Answering service cost: plan for minutes and coverage",
+        "description": "Compare answering service billing models, estimate monthly minutes and review plan limits alongside Revo’s official pricing.",
+        "navigationLabel": "Answering service cost",
+        "eyebrow": "Budget and coverage",
+        "lead": "Budget for the conversation and the work after it.",
+        "intro": "Answering service cost depends on the billing model, included usage and the responsibilities covered. Start with your call records and a current written offer rather than an assumed saving or a missed-call revenue estimate.",
+        "sections": [
+          {
+            "title": "Compare the billing model before the headline price.",
+            "paragraphs": [
+              "Providers can quote a monthly subscription with included minutes, a per-minute rate, a per-call package or a staffing arrangement. These are comparison categories, not claims about a particular competitor.",
+              "Ask what counts as billable time, how rounding works and whether transfers, short calls or follow-up use the allowance. Request the current terms for additional usage; do not infer an overage rate by dividing the monthly fee by included minutes."
+            ],
+            "items": [
+              "List the monthly base charge and included allowance.",
+              "Check additional usage, setup charges and cancellation terms in the actual offer.",
+              "Compare coverage hours and responsibilities as well as price."
+            ]
+          },
+          {
+            "title": "Estimate monthly minutes from your own records.",
+            "paragraphs": [
+              "For a planning scenario, multiply expected handled calls by their average handled duration. Example only: 40 calls × 2 minutes = 80 minutes for one month; 60 × 3 = 180 minutes. Neither example describes Revo traffic or customer results.",
+              "Separate new inquiries, existing customers and irrelevant calls. Use the provider’s billing rules to convert those categories into a billable estimate, and leave unknowns unresolved until the terms are confirmed."
+            ],
+            "items": [
+              "Use the same monthly period for call count and minutes.",
+              "Review a quieter and a busier month rather than one average alone.",
+              "Allow for longer calls, callbacks and the office work that remains."
+            ]
+          },
+          {
+            "title": "Read the current Revo plans and their feature limits.",
+            "paragraphs": [
+              "The plan block below comes from the shared official pricing data. Check the linked pricing page for the current offer and terms. Review the current Launch Offer terms, including eligibility and how long your rate applies.",
+              "Solo does not include team transfers, WhatsApp follow-up, field-service software connections, recordings and transcripts, dedicated onboarding, training on your own calls, multiple numbers and locations, or an account manager. Crew adds the first five of those features, but excludes the last three. Fleet lists those additional features. Confirm that the supported setup fits your operation."
+            ],
+            "items": []
+          },
+          {
+            "title": "Keep subscription cost separate from opportunity value.",
+            "paragraphs": [
+              "This guide estimates the cost and usage of answering coverage. The separate cost-of-missed-calls worksheet explores potential gross job value under your own assumptions. It does not prove that a subscription recovers that value or pays for itself.",
+              "Include who reviews summaries, confirms requests and handles exceptions when comparing options. A lower monthly price does not establish an identical service scope."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Is the monthly fee divided by minutes an overage rate?",
+            "a": "No. That arithmetic is not a contractual rate for extra usage. Ask for the current billing terms."
+          },
+          {
+            "q": "Can I estimate usage without historical call records?",
+            "a": "Use a clearly labeled range as a planning assumption, then replace it with observed call counts and durations. Do not treat it as measured usage."
+          },
+          {
+            "q": "Does this page calculate lost revenue?",
+            "a": "No. It covers answering service costs and minute planning. The separate worksheet addresses potential inquiry value under assumptions."
+          }
+        ],
+        "related": [
+          "cost-of-missed-calls",
+          "overflow-answering",
+          "appointment-booking"
+        ],
+        "takeaway": "Budget for the conversation and the work after it.",
+        "pricingVariant": "full",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "source": {
+          "kind": "manual",
+          "reference": "Authorized second October 8 batch; Sentinel_31743d7c0fe081918f57addac5d853c0; official Services and Pricing reviewed 2026-10-08 (batch 2026-10-08-second-five)"
+        }
+      }
+    }
+  ]
+}
