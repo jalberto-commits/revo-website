@@ -1,0 +1,147 @@
+{
+  "batchId": "2026-10-09-fixture-sixth-and-draft",
+  "source": {
+    "kind": "fixture",
+    "reference": "seo/shared/fixtures (pipeline tests only)"
+  },
+  "operations": [
+    {
+      "op": "add",
+      "record": {
+        "slug": "weekend-calls",
+        "title": "Weekend call coverage for home service teams",
+        "description": "Fixture page used only by the pipeline tests to prove that a sixth approved guide is routed, listed and linked.",
+        "eyebrow": "Fixture",
+        "lead": "FIXTURE CONTENT for pipeline tests only. Never published.",
+        "intro": "This record exists to prove the daily publishing workflow in a throwaway copy of the site.",
+        "sourcePaths": [
+          "fixtures/weekend-calls"
+        ],
+        "sections": [
+          {
+            "title": "Review the journey of an unanswered call.",
+            "paragraphs": [
+              "Use your own call records to check whether a call reached voicemail, disconnected or reached another answering option. Do not assume every unanswered call was a qualified new job.",
+              "Look for patterns by time and situation. A call from an existing customer, a wrong number and a new service inquiry need different treatment."
+            ],
+            "items": [
+              "What does the caller hear when nobody picks up?",
+              "Is there a clear way to leave contact details?",
+              "Who reviews the request and confirms the next action?"
+            ]
+          },
+          {
+            "title": "Match the response to the reason you missed the call.",
+            "paragraphs": [
+              "A useful fix depends on the gap: an unclear voicemail greeting, inconsistent office coverage or a missing follow-up owner. AI answering is one option to evaluate alongside voicemail and human reception.",
+              "Revo’s published offer lists answering and call summaries. Confirm the call flow you need through review and testing; this page does not claim that every caller will book or that no calls can ever be missed."
+            ],
+            "items": [
+              "If you are busy on-site, review how a caller can leave a usable request.",
+              "If a request is recorded, make one person responsible for follow-up.",
+              "If calls arrive outside office hours, use the after-hours policy rather than promising immediate field service."
+            ]
+          },
+          {
+            "title": "Measure a process, not a promised recovery.",
+            "paragraphs": [
+              "Track the requests your team actually receives and the actions it takes. Compare like-for-like periods, and distinguish answered calls, service inquiries and confirmed bookings.",
+              "If you want to explore the financial side, use the separate scenario worksheet. It uses your inputs and does not turn an unanswered call into measured lost revenue."
+            ],
+            "items": [
+              "Record the reason and next action for a request.",
+              "Check whether follow-up happened within your own agreed window.",
+              "Keep observed results separate from scenarios or forecasts."
+            ]
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Is every missed call lost revenue?",
+            "a": "No. Calls can include existing customers, wrong numbers and unqualified inquiries. Actual outcomes require your own records."
+          },
+          {
+            "q": "Should I replace voicemail immediately?",
+            "a": "Review the existing process first. A clearer greeting and reliable follow-up may address part of the problem; compare options against your actual needs."
+          },
+          {
+            "q": "What is the difference between this page and the cost worksheet?",
+            "a": "This page helps you improve the handling process. The worksheet explores potential job value under assumptions; it does not diagnose your phone setup."
+          }
+        ],
+        "takeaway": "Process diagnosis and follow-up are the focus; no loss rate, conversion uplift or customer outcome is asserted.",
+        "pricingVariant": "missed-calls",
+        "navigationLabel": "Weekend calls"
+      }
+    },
+    {
+      "op": "add",
+      "record": {
+        "slug": "holiday-calls",
+        "title": "Holiday call coverage for home service teams",
+        "description": "Fixture draft used only by the pipeline tests to prove that an unapproved guide never reaches the public output.",
+        "eyebrow": "Fixture draft",
+        "lead": "FIXTURE CONTENT for pipeline tests only. Never published.",
+        "intro": "This record exists to prove the daily publishing workflow in a throwaway copy of the site.",
+        "sourcePaths": [
+          "fixtures/holiday-calls"
+        ],
+        "sections": [
+          {
+            "title": "Review the journey of an unanswered call.",
+            "paragraphs": [
+              "Use your own call records to check whether a call reached voicemail, disconnected or reached another answering option. Do not assume every unanswered call was a qualified new job.",
+              "Look for patterns by time and situation. A call from an existing customer, a wrong number and a new service inquiry need different treatment."
+            ],
+            "items": [
+              "What does the caller hear when nobody picks up?",
+              "Is there a clear way to leave contact details?",
+              "Who reviews the request and confirms the next action?"
+            ]
+          },
+          {
+            "title": "Match the response to the reason you missed the call.",
+            "paragraphs": [
+              "A useful fix depends on the gap: an unclear voicemail greeting, inconsistent office coverage or a missing follow-up owner. AI answering is one option to evaluate alongside voicemail and human reception.",
+              "Revo’s published offer lists answering and call summaries. Confirm the call flow you need through review and testing; this page does not claim that every caller will book or that no calls can ever be missed."
+            ],
+            "items": [
+              "If you are busy on-site, review how a caller can leave a usable request.",
+              "If a request is recorded, make one person responsible for follow-up.",
+              "If calls arrive outside office hours, use the after-hours policy rather than promising immediate field service."
+            ]
+          },
+          {
+            "title": "Measure a process, not a promised recovery.",
+            "paragraphs": [
+              "Track the requests your team actually receives and the actions it takes. Compare like-for-like periods, and distinguish answered calls, service inquiries and confirmed bookings.",
+              "If you want to explore the financial side, use the separate scenario worksheet. It uses your inputs and does not turn an unanswered call into measured lost revenue."
+            ],
+            "items": [
+              "Record the reason and next action for a request.",
+              "Check whether follow-up happened within your own agreed window.",
+              "Keep observed results separate from scenarios or forecasts."
+            ]
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Is every missed call lost revenue?",
+            "a": "No. Calls can include existing customers, wrong numbers and unqualified inquiries. Actual outcomes require your own records."
+          },
+          {
+            "q": "Should I replace voicemail immediately?",
+            "a": "Review the existing process first. A clearer greeting and reliable follow-up may address part of the problem; compare options against your actual needs."
+          },
+          {
+            "q": "What is the difference between this page and the cost worksheet?",
+            "a": "This page helps you improve the handling process. The worksheet explores potential job value under assumptions; it does not diagnose your phone setup."
+          }
+        ],
+        "takeaway": "Process diagnosis and follow-up are the focus; no loss rate, conversion uplift or customer outcome is asserted.",
+        "pricingVariant": "missed-calls",
+        "navigationLabel": "Holiday calls"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+# Release check for every pull request into main and every push to main.
+#
+# It runs untrusted contributor code (a fork's pull request), so it holds no
+# secrets and only reads the repository: `pull_request` (never
+# `pull_request_target`), a read-only token, and no credentials left in the
+# checkout. Branch protection on main requires the `seo-ci` job to pass.
+
+name: SEO release checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  seo-ci:
+    name: seo-ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node 24 (the version Vercel builds with)
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - name: Install locked dependencies
+        run: npm --prefix seo/app ci --no-audit --no-fund
+
+      - name: Validate the page registry
+        run: npm run seo:validate
+
+      - name: Check vercel.json routes match the approved registry
+        run: npm run seo:routes:check
+
+      - name: Build the static release
+        run: npm --prefix seo/app run build:site
+
+      - name: Unit and integration tests
+        run: npm run seo:test
+
+      - name: Verify the release output
+        run: npm run seo:verify
+
+      - name: Fixture end-to-end (sixth page, draft, index, withdrawal)
+        run: npm run seo:fixtures

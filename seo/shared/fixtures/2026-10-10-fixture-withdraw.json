@@ -1,0 +1,14 @@
+{
+  "batchId": "2026-10-10-fixture-withdraw",
+  "source": {
+    "kind": "fixture",
+    "reference": "seo/shared/fixtures (pipeline tests only)"
+  },
+  "operations": [
+    {
+      "op": "withdraw",
+      "slug": "weekend-calls",
+      "reason": "Fixture: prove that withdrawal cleans the output"
+    }
+  ]
+}

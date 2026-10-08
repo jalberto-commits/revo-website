@@ -1,3 +1,26 @@
-import {readFileSync} from 'node:fs';
-export function readRegistry(sharedRoot){const pages=JSON.parse(readFileSync(new URL('data/landing-pages.json',sharedRoot),'utf8'));const slugs=new Set();for(const p of pages){if(!/^[a-z0-9-]+(?:\/[a-z0-9-]+)*$/.test(p.slug)||slugs.has(p.slug))throw Error('Invalid/duplicate landing slug');slugs.add(p.slug);if(!['full','missed-calls','voicemail','receptionist','worksheet'].includes(p.pricingVariant))throw Error('Unknown pricing variant');}return pages;}
-export const landingPath=page=>'/ai-answering-service/'+page.slug;
+import { existsSync, readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
+
+import { assertRegistry } from './registry-contract.mjs';
+
+export { approvedPages, contentHash, landingPath, relatedPages } from './registry-contract.mjs';
+
+/**
+ * Reads and validates the landing registry. A record that breaks the contract
+ * (missing editorial fields, duplicate slug or metadata, stale approval, a
+ * referenced asset that does not exist) stops the build with every problem listed.
+ *
+ * @param {URL} sharedRoot file URL of seo/shared/ (with a trailing slash)
+ * @param {{ websiteRoot?: string, registryFile?: string }} [options]
+ */
+export function readRegistry(sharedRoot, options = {}) {
+  const file = options.registryFile ?? fileURLToPath(new URL('data/landing-pages.json', sharedRoot));
+  const pages = JSON.parse(readFileSync(file, 'utf8'));
+  const shared = fileURLToPath(sharedRoot);
+  const assetExists = options.websiteRoot
+    ? path => existsSync(join(options.websiteRoot, decodeURI(path))) || existsSync(join(shared, 'public', decodeURI(path)))
+    : undefined;
+  return assertRegistry(pages, { assetExists });
+}
+

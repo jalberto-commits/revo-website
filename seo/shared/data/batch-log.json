@@ -1,0 +1,12 @@
+[
+  {
+    "batchId": "2026-10-07-initial-five",
+    "batchHash": "sha256:dcf0dda16eca128cd3ec372c9e6728f00172aaf27d6b3fdc8a9f6f3a738fc148",
+    "source": {
+      "kind": "manual",
+      "reference": "jd90983/revo-website#43"
+    },
+    "appliedAt": "2026-10-08",
+    "changes": []
+  }
+]

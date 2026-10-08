@@ -6,7 +6,7 @@
     "typecheck": "tsc --noEmit",
     "build:site": "node tools/build-site.mjs",
     "verify:site": "node tools/verify-site.mjs",
-    "test": "node --import ../shared/scripts/test-typescript.mjs --test ../shared/tests/landing-integration.test.mjs"
+    "test": "node --import ../shared/scripts/test-typescript.mjs --test ../shared/tests/landing-integration.test.mjs ../shared/tests/registry-contract.test.mjs"
   },
   "dependencies": {
     "next": "15.5.27",

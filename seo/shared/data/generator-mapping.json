@@ -1,0 +1,24 @@
+{
+  "_comment": "Contract field -> column in the generator's export (dot paths allowed). Identity mapping until the real export format is confirmed; edit this file, not the adapter, when the generator's columns differ. Rows never carry approval: every imported page is a draft until `npm run seo -- approve`.",
+  "sourceKind": "generator",
+  "rows": null,
+  "fields": {
+    "slug": "slug",
+    "title": "title",
+    "description": "description",
+    "eyebrow": "eyebrow",
+    "lead": "lead",
+    "intro": "intro",
+    "takeaway": "takeaway",
+    "navigationLabel": "navigationLabel",
+    "pricingVariant": "pricingVariant",
+    "sourcePaths": "sourcePaths",
+    "sections": "sections",
+    "faqs": "faqs",
+    "calculator": "calculator",
+    "comparison": "comparison",
+    "related": "related",
+    "image": "image"
+  },
+  "defaults": {}
+}
