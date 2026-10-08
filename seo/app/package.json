@@ -9,7 +9,7 @@
     "test": "node --import ../shared/scripts/test-typescript.mjs --test ../shared/tests/landing-integration.test.mjs"
   },
   "dependencies": {
-    "next": "15.5.19",
+    "next": "15.5.27",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },

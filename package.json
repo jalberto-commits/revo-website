@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vercel dev",
-    "build": "npm --prefix seo/app ci && npm --prefix seo/app test && npm --prefix seo/app run build:site && npm --prefix seo/app run verify:site",
+    "build": "npm --prefix seo/app ci && npm --prefix seo/app run build:site && npm --prefix seo/app test && npm --prefix seo/app run verify:site",
     "seo:build": "npm --prefix seo/app run build:site",
     "seo:verify": "npm --prefix seo/app run verify:site",
     "seo:test": "npm --prefix seo/app test"
@@ -15,6 +15,6 @@
   },
   "devDependencies": {},
   "engines": {
-    "node": ">=18.x"
+    "node": "24.x"
   }
 }
