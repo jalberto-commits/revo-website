@@ -263,7 +263,7 @@
         "title": "Use a simple choice rule for your business.",
         "paragraphs": [
           "Voicemail may fit a business that wants a message-taking route and can reliably return those messages. An AI receptionist may fit calls that need structured intake or appointment options while the office is unavailable.",
-          "Compare the workload you want handled, the current plan terms and the time your office still spends on follow-up. This page supports that decision; it does not predict traffic, conversion rates or savings."
+          "Compare the workload you want handled, the current plan terms and the time your office still spends on follow-up."
         ],
         "items": []
       }
@@ -289,17 +289,17 @@
     "takeaway": "Choose the call workflow your office can follow through on.",
     "pricingVariant": "voicemail",
     "navigationLabel": "AI receptionist vs voicemail",
+    "h1": "AI Receptionist vs Voicemail for Home Service Businesses",
     "source": {
       "kind": "manual",
-      "reference": "User-authorized first-five rewrite; keyword map proposed from supplied Semrush US 2026-10-08; repository Services/Pricing checked 2026-10-08, official pricing snapshot 2026-10-06; Preview review required before merge"
+      "reference": "Independent editorial review passed PR47; user requested removal of internal SEO sentence only; Preview review only (batch 2026-10-08-first-five-editorial-polish)"
     },
-    "h1": "AI Receptionist vs Voicemail for Home Service Businesses",
     "publicationStatus": "approved",
     "review": {
-      "reviewer": "Codex, user-authorized first-five Preview editorial review",
+      "reviewer": "Independent editorial review reported by user",
       "reviewedAt": "2026-10-08",
-      "contentHash": "sha256:0d15605e12e45dd4c069ed17bf79c945fb2fc567489a580ec3fb8c34a857f7a7",
-      "note": "Content prepared for user review in isolated Preview. Keyword map is proposed, not user-approved. Atomic approval of mutually related records enables Preview only; no merge or production authorization."
+      "contentHash": "sha256:33bc6ed07a0d58f5526cbe4a07325daec908eb1b2b0d8132ad26574e00a6338b",
+      "note": "Exact requested polish for PR47 Preview; no merge or production approval."
     }
   },
   {

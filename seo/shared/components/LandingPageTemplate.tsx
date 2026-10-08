@@ -8,7 +8,7 @@ import {OfficialPricing, PricingSummary} from "./OfficialPricing";
 
 const accents: Record<string, string> = {
   "after-hours": "After-Hours Answering Service",
-  "missed-calls": "missed business calls",
+  "missed-calls": "Missing Business Calls",
   "compare/ai-vs-voicemail": "AI Receptionist vs Voicemail",
   "compare/ai-vs-live-receptionist": "Human Receptionist",
   "cost-of-missed-calls": "Potential Revenue",

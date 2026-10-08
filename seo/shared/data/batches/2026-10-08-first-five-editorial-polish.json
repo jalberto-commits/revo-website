@@ -1,0 +1,120 @@
+{
+  "batchId": "2026-10-08-first-five-editorial-polish",
+  "source": {
+    "kind": "manual",
+    "reference": "Independent editorial review passed PR47; user requested removal of internal SEO sentence only; Preview review only"
+  },
+  "operations": [
+    {
+      "op": "update",
+      "record": {
+        "slug": "compare/ai-vs-voicemail",
+        "title": "AI Receptionist vs Voicemail for Home Service Businesses",
+        "description": "Compare an AI receptionist with voicemail for home service calls: caller questions, appointment booking, follow-up and the work your team still owns.",
+        "eyebrow": "AI receptionist vs voicemail",
+        "lead": "Compare a recorded message with a call that can move to the next step.",
+        "intro": "AI receptionist vs voicemail is a choice about what happens during the call. Voicemail records what a caller leaves for your team to review. An AI receptionist can ask questions and follow a configured call flow. Revo’s published service also includes appointment booking, SMS follow-up and call summaries.",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "comparison": {
+          "left": "Voicemail",
+          "right": "Revo AI receptionist",
+          "rows": [
+            [
+              "During the call",
+              "The caller leaves a message after the greeting.",
+              "The agent follows your configured script, hours and rules."
+            ],
+            [
+              "Scheduling",
+              "Your team normally handles the booking after reviewing the message.",
+              "Appointment booking is a published feature, within your setup and availability."
+            ],
+            [
+              "Information for the office",
+              "The recording contains the details the caller chose to leave.",
+              "The published plans include a call dashboard with summaries."
+            ],
+            [
+              "Follow-up",
+              "Your team decides when and how to return the message.",
+              "SMS follow-up is listed; your team still owns unresolved requests."
+            ],
+            [
+              "Transfer to a person",
+              "Depends on the phone system, separate from message recording.",
+              "Transfers to your team are listed in Crew and Fleet, not Solo."
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "title": "A service request can need more than a recorded message.",
+            "paragraphs": [
+              "Imagine a homeowner calling a roofing business to ask for an inspection. A voicemail might capture a name and number, leaving the office to call back for the address, request and timing. A configured AI call flow can ask those questions during the conversation and use the booking options your business permits.",
+              "This is an illustrative difference in workflow, not evidence that one option produces more bookings. Some calls only need a message. Others benefit from a conversation that clarifies the request and gives a next step."
+            ],
+            "items": [
+              "List the details your office routinely asks for on callbacks.",
+              "Identify which requests can move to an appointment during the call.",
+              "Keep a callback route for questions the agent cannot resolve."
+            ]
+          },
+          {
+            "title": "Choose what happens after the greeting.",
+            "paragraphs": [
+              "With voicemail, keep the greeting accurate: business name, office hours and the information callers should leave. Assign someone to review messages and return calls. A recording helps only when the message is clear and the team follows through.",
+              "With Revo, write the intake questions and booking boundaries into your own script, hours and rules. The published plans include 24/7 answering, SMS follow-up and summaries. Use those features to support a defined workflow rather than assume the agent can answer every business-specific question."
+            ],
+            "items": []
+          },
+          {
+            "title": "Test the same requests on both options.",
+            "paragraphs": [
+              "Use a small set of realistic calls: an available appointment, a request outside your service area and an existing customer asking for an update. For voicemail, review the information left and the callback work required. For the AI receptionist, review the answers and the next step produced.",
+              "Check how unresolved requests reach your team. Crew and Fleet list transfers; Solo does not. If your chosen plan uses a message or callback instead, write that expectation clearly and make someone responsible for it."
+            ],
+            "items": [
+              "Can the caller understand what will happen next?",
+              "Is the information complete enough for your office to act?",
+              "Does the flow stay within booking and service boundaries?"
+            ]
+          },
+          {
+            "title": "Use a simple choice rule for your business.",
+            "paragraphs": [
+              "Voicemail may fit a business that wants a message-taking route and can reliably return those messages. An AI receptionist may fit calls that need structured intake or appointment options while the office is unavailable.",
+              "Compare the workload you want handled, the current plan terms and the time your office still spends on follow-up."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "What is the main difference between an AI receptionist and voicemail?",
+            "a": "Voicemail records a message for later review. An AI receptionist follows a conversational flow and may handle tasks during the call. Revo publishes appointment booking, SMS follow-up and call summaries as features."
+          },
+          {
+            "q": "Can voicemail book appointments?",
+            "a": "A basic voicemail recording does not itself schedule a visit; your team normally completes that step. Revo lists booking as a feature, subject to your configured availability and rules."
+          },
+          {
+            "q": "Do I still need to review calls with an AI receptionist?",
+            "a": "Yes. Your team should review summaries, handle exceptions and check that bookings and follow-up match your business rules."
+          },
+          {
+            "q": "Which option should a small home service business choose?",
+            "a": "Choose based on the calls you receive and the work you need handled. Compare message-taking with structured intake and booking using the same realistic test requests."
+          }
+        ],
+        "takeaway": "Choose the call workflow your office can follow through on.",
+        "pricingVariant": "voicemail",
+        "navigationLabel": "AI receptionist vs voicemail",
+        "h1": "AI Receptionist vs Voicemail for Home Service Businesses"
+      }
+    }
+  ]
+}

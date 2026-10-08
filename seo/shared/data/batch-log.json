@@ -24,5 +24,17 @@
       "updated compare/ai-vs-live-receptionist; back to draft until re-approved",
       "updated cost-of-missed-calls; back to draft until re-approved"
     ]
+  },
+  {
+    "batchId": "2026-10-08-first-five-editorial-polish",
+    "batchHash": "sha256:5c68fd79197d355d0f265ea53d1c822e00a7a249f32c4a5166651d3d8a1c9f6f",
+    "source": {
+      "kind": "manual",
+      "reference": "Independent editorial review passed PR47; user requested removal of internal SEO sentence only; Preview review only"
+    },
+    "appliedAt": "2026-10-08",
+    "changes": [
+      "updated compare/ai-vs-voicemail; back to draft until re-approved"
+    ]
   }
 ]
