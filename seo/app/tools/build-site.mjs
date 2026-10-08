@@ -5,11 +5,11 @@ const args=process.argv.slice(2);function option(name,fallback){const i=args.ind
 const website=resolve(app,option('--website',config.websiteRoot)),shared=resolve(app,option('--shared',config.sharedRoot)),output=resolve(website,option('--output',config.outputDirectory));
 if([website,shared,app].includes(output)||/\/(?:\.git|node_modules|\.agents|\.codex)(?:\/|$)/.test(output))throw Error('Unsafe output path');
 const {readRegistry,landingPath,approvedPages}=await import(pathToFileURL(join(shared,'lib/landing-registry.mjs')));
-const {publicRoutes,homeNavigation,withSeoRewrites,serializeVercel,INDEX_PATH}=await import(pathToFileURL(join(app,'tools/routes.mjs')));
+const {publicRoutes,homeNavigation,seoRewrites,currentSeoRewrites,INDEX_PATH}=await import(pathToFileURL(join(app,'tools/routes.mjs')));
 // The registry is validated in full (fields, uniqueness, review hash, assets) before anything is built.
 const registry=readRegistry(pathToFileURL(shared+'/'),{websiteRoot:website});const pages=approvedPages(registry);if(!pages.length)throw Error('No approved pages');
 // Vercel reads routes from the committed vercel.json, so a stale file must stop the build rather than publish unrouted pages.
-const vercelSource=await readFile(join(website,'vercel.json'),'utf8');if(serializeVercel(withSeoRewrites(JSON.parse(vercelSource),registry,config))!==vercelSource)throw Error('vercel.json routes are out of date with the approved registry: run `npm run seo:routes` and commit');
+const vercelConfig=JSON.parse(await readFile(join(website,'vercel.json'),'utf8'));if(JSON.stringify(currentSeoRewrites(vercelConfig))!==JSON.stringify(seoRewrites(registry,config)))throw Error('vercel.json routes are out of date with the approved registry: run `npm run seo:routes` and commit');
 const routes=publicRoutes(registry,config);
 const origin=new URL(config.publicOrigin).origin;
 async function walk(dir){const result=[];for(const e of await readdir(dir,{withFileTypes:true})){const p=join(dir,e.name);if(e.isSymbolicLink())throw Error('Symlink in public sources');if(e.isDirectory())result.push(...await walk(p));else if(e.isFile())result.push(p);}return result;}

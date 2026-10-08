@@ -22,13 +22,18 @@ const pages = readRegistry(pathToFileURL(shared + '/'), { websiteRoot: website }
 const before = readFileSync(vercelFile, 'utf8');
 const after = serializeVercel(withSeoRewrites(JSON.parse(before), pages, config));
 
+// Drift is judged on the routes themselves, not on whitespace: the build host may
+// re-serialize vercel.json, and what matters is the SEO rewrites it carries.
+const drift = JSON.stringify(currentSeoRewrites(JSON.parse(before))) !== JSON.stringify(seoRewrites(pages, config));
+
 if (process.argv.includes('--check')) {
-  if (before !== after) {
+  if (drift) {
     const have = currentSeoRewrites(JSON.parse(before)).map(r => r.source);
     const want = seoRewrites(pages, config).map(r => r.source);
     console.error('vercel.json is out of date with the approved registry. Run `npm run seo:routes` and commit the result.');
     console.error('  missing:', want.filter(s => !have.includes(s)).join(', ') || 'none');
     console.error('  extra:  ', have.filter(s => !want.includes(s)).join(', ') || 'none');
+    if (have.length === want.length && have.every(s => want.includes(s))) console.error('  the same routes in a different order, or with other destinations');
     process.exit(1);
   }
   console.log(`PASS vercel.json routes match the approved registry (${seoRewrites(pages, config).length} SEO rewrites)`);
