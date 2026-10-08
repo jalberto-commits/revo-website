@@ -2,11 +2,11 @@
 // so fixture content can never reach the repository or a deployment.
 //
 //   A. a batch adds a sixth page and a draft; a reviewer approves only the sixth
-//      -> the sixth is built, routed, in the sitemap and the homepage navigation;
+//      -> the sixth is built, routed, in the sitemap; original homepage preserved;
 //         the draft is nowhere
-//   B. the navigation limit drops below the catalog -> the guide index appears
+//   B. the index threshold drops below the catalog -> the guide index appears
 //   C. a batch withdraws the sixth -> it disappears from output, routes, sitemap,
-//      navigation and related links (the output is rebuilt clean)
+//      related links; original homepage stays unchanged (the output is rebuilt clean)
 //
 // Every step uses the real tools (seo.mjs, generate-routes.mjs, build-site.mjs,
 // verify-site.mjs). Pass --keep to leave the copy for inspection.
@@ -55,7 +55,7 @@ const SIXTH = '/ai-answering-service/weekend-calls';
 const DRAFT = '/ai-answering-service/holiday-calls';
 const INDEX = '/ai-answering-service';
 const sitemapHas = path => read('sitemap.xml').includes(`<loc>https://www.revoapp.ai${path}</loc>`);
-const homeLinks = () => [...read('index.html').match(/<nav data-revo-call-planning[^>]*>(.*?)<\/nav>/s)[1].matchAll(/href="([^"]+)"/g)].map(m => m[1]);
+const homePreserved = () => assert.equal(read('index.html'), readFileSync(join(work, 'index.html'), 'utf8'), 'original homepage must stay byte-identical');
 
 try {
   step('install locked dependencies in the copy');
@@ -69,32 +69,32 @@ try {
   assert.ok(existsSync(out(SIXTH.slice(1) + '.html')), 'sixth page built');
   assert.ok(vercelSources().includes(SIXTH), 'sixth page routed');
   assert.ok(sitemapHas(SIXTH), 'sixth page in sitemap');
-  assert.ok(homeLinks().includes(SIXTH), 'sixth page in homepage navigation');
+  homePreserved();
   assert.ok(!existsSync(out(DRAFT.slice(1) + '.html')), 'draft not built');
-  assert.ok(!vercelSources().includes(DRAFT) && !sitemapHas(DRAFT) && !homeLinks().includes(DRAFT), 'draft not routed, listed or linked');
+  assert.ok(!vercelSources().includes(DRAFT) && !sitemapHas(DRAFT), 'draft not routed or listed');
   assert.ok(!existsSync(out('ai-answering-service.html')), 'no index while the navigation holds every guide');
-  console.log(`  ok: ${SIXTH} built, routed, in sitemap and navigation; ${DRAFT} absent everywhere`);
+  console.log(`  ok: ${SIXTH} built, routed, in sitemap; original homepage preserved; ${DRAFT} absent everywhere`);
 
   step('B. navigation limit 5 < 6 approved guides: the guide index appears');
   setLimit(5);
   release();
   assert.ok(existsSync(out('ai-answering-service.html')), 'index built');
   assert.ok(vercelSources().includes(INDEX) && sitemapHas(INDEX), 'index routed and in sitemap');
-  assert.deepEqual(homeLinks().length, 6, 'five guides plus the index link');
-  assert.equal(homeLinks().at(-1), INDEX);
+  homePreserved();
   assert.ok(read('ai-answering-service.html').includes(`href="${SIXTH}"`), 'index lists the sixth page');
   assert.ok(!read('ai-answering-service.html').includes(`href="${DRAFT}"`), 'index does not list the draft');
-  console.log('  ok: homepage links 5 guides + "All call guides"; index lists all 6 approved guides');
+  console.log('  ok: homepage unchanged; index lists all 6 approved guides');
 
   step('C. batch withdraws the sixth page; the output is rebuilt clean');
   setLimit(6);
   console.log('  ' + seo('apply', 'seo/shared/fixtures/2026-10-10-fixture-withdraw.json').trim().replaceAll('\n', '\n  '));
   release();
   assert.ok(!existsSync(out(SIXTH.slice(1) + '.html')) && !existsSync(out(SIXTH.slice(1) + '.txt')), 'withdrawn page removed from output');
-  assert.ok(!vercelSources().includes(SIXTH) && !sitemapHas(SIXTH) && !homeLinks().includes(SIXTH), 'withdrawn page unrouted and unlisted');
+  assert.ok(!vercelSources().includes(SIXTH) && !sitemapHas(SIXTH), 'withdrawn page unrouted and unlisted');
   assert.ok(!existsSync(out('ai-answering-service.html')), 'index removed again');
+  homePreserved();
   for (const page of ['after-hours', 'missed-calls', 'cost-of-missed-calls']) assert.ok(!read(`ai-answering-service/${page}.html`).includes(`href="${SIXTH}"`), `no related link to the withdrawn page on ${page}`);
-  console.log(`  ok: ${SIXTH} gone from output, vercel.json, sitemap, navigation and related links`);
+  console.log(`  ok: ${SIXTH} gone from output, vercel.json, sitemap and related links; homepage preserved`);
 
   step('status of the fixture registry');
   console.log('  ' + seo('status').trim().replaceAll('\n', '\n  '));

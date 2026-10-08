@@ -63,6 +63,8 @@ test('invalid metadata is rejected with a readable reason', () => {
 test('an approval is bound to the reviewed content: editing it afterwards fails', () => {
   const edited = REGISTRY.map((page, i) => (i === 0 ? { ...page, lead: page.lead + ' Edited after review.' } : page));
   assert.ok(registryErrors(edited).some(e => e.includes('content changed after review')));
+  const editedH1 = REGISTRY.map((page, i) => i === 0 ? { ...page, h1: 'An unreviewed changed heading' } : page);
+  assert.ok(registryErrors(editedH1).some(e => e.includes('content changed after review')));
   const unreviewed = REGISTRY.map((page, i) => (i === 0 ? strip(page) : page)).map((page, i) => (i === 0 ? { ...page, publicationStatus: 'approved' } : page));
   assert.ok(registryErrors(unreviewed).some(e => e.includes('needs review')));
 });

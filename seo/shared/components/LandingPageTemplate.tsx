@@ -7,18 +7,19 @@ import {FunnelCTA} from "./FunnelCTA";
 import {OfficialPricing, PricingSummary} from "./OfficialPricing";
 
 const accents: Record<string, string> = {
-  "after-hours": "After-hours answering",
+  "after-hours": "After-Hours Answering Service",
   "missed-calls": "missed business calls",
-  "compare/ai-vs-voicemail": "AI answering vs voicemail",
-  "compare/ai-vs-live-receptionist": "live receptionist",
-  "cost-of-missed-calls": "potential value",
+  "compare/ai-vs-voicemail": "AI Receptionist vs Voicemail",
+  "compare/ai-vs-live-receptionist": "Human Receptionist",
+  "cost-of-missed-calls": "Potential Revenue",
 };
 
 function PageTitle({page}: {page: ReviewPage}) {
+  const heading = page.h1 ?? page.title;
   const accent = accents[page.slug];
-  const position = accent ? page.title.indexOf(accent) : -1;
-  if (position < 0) return <h1>{page.title}</h1>;
-  return <h1>{page.title.slice(0, position)}<span className="revo-accent">{accent}</span>{page.title.slice(position + accent.length)}</h1>;
+  const position = accent ? heading.indexOf(accent) : -1;
+  if (position < 0) return <h1>{heading}</h1>;
+  return <h1>{heading.slice(0, position)}<span className="revo-accent">{accent}</span>{heading.slice(position + accent.length)}</h1>;
 }
 
 

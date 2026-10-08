@@ -1,6 +1,6 @@
 # SEO/AEO guides: publication workflow
 
-The `/ai-answering-service/...` guides are static pages built into the existing site. The build exports every approved page with Next.js (`output: 'export'`), copies the original website unchanged into `.seo-dist`, and adds only the guides, their routes, sitemap URLs and homepage links. No server, form or lead capture is added. `acquisitionEnabled: false` in `seo/app/site.config.json` keeps the guides content-only: no signup, free-test or App Store links, and no form.
+The `/ai-answering-service/...` guides are static pages built into the existing site. The build exports every approved page with Next.js (`output: 'export'`), copies the original website unchanged into `.seo-dist`, and adds only the guides, their routes and sitemap URLs; the original homepage and its navigation are preserved byte-for-byte. No server, form or lead capture is added. `acquisitionEnabled: false` in `seo/app/site.config.json` keeps the guides content-only: no signup, free-test or App Store links, and no form.
 
 ## Daily runbook
 
@@ -12,7 +12,7 @@ Each batch is one branch and one pull request. Merging and publishing stay with 
    - By hand: write that batch file yourself, with `add`, `update` and `withdraw` operations.
    - Then `npm run seo -- apply seo/shared/data/batches/<batchId>.json`. Added and changed pages become **drafts**. Applying the same batch again changes nothing.
 3. **Editorial review and approval, on the branch.** Editors read the drafts in the batch file or the registry diff. For each page they accept, run `npm run seo -- approve <slug> --reviewer "<name>"`. Approval records the reviewer, the date and the hash of the exact content. Any later edit makes the page fail validation until it is approved again. Drafts never appear on any build. Approved pages appear on this branch's Preview for a final visual check, and reach production only when a maintainer merges.
-4. **Routes.** Run `npm run seo:routes`. It regenerates the guide rewrites in `vercel.json` from the approved pages and keeps every other route. Commit everything.
+4. **Routes.** Run `npm run seo:routes`. It regenerates the guide rewrites in `vercel.json` from the approved pages and keeps every other route. No guide navigation is injected into Home. Commit everything.
 5. **Pull request into main.** Two checks must pass:
    - The required `seo-ci` check: validate, route check, build, tests, verify and the fixture end-to-end run.
    - The Vercel Preview, built in `seo-review`.
@@ -42,7 +42,7 @@ The registry is `seo/shared/data/landing-pages.json`. It is the only source the 
 - **Uniqueness:** slugs are unique. Titles, descriptions and navigation labels are unique among pages that are not withdrawn.
 - **Assets:** every image the record names (`image`, or a site path inside its text) must exist in the site.
 - **Related links:** each page shows at most 4 related guides, from its own `related` list or the nearest approved pages.
-- **Homepage navigation:** it links the first `navigationLimit` guides, 6 by default. Beyond that it links the generated guide index, `/ai-answering-service`.
+- **Original navigation:** Home and Pricing are copied unchanged. Guides retain Services, the original Industry destinations and Pricing, without acquisition buttons when disabled. Related links stay in guide bodies; the guide index is exported when the catalog outgrows `navigationLimit`, 6 by default.
 - **Records:** `seo/shared/data/batches/` holds the applied batches. `batch-log.json` holds the applied batch ids and their hashes. `releases.json` maps each published commit to its deployment.
 
 The generator, including any Supabase table it uses, is **not connected** and has no schedule here. `seo/shared/data/generator-mapping.json` names which export column feeds which field, and starts as an identity mapping. Confirm it against a real export before the first import. Imports never carry an approval.
@@ -62,12 +62,12 @@ The generator, including any Supabase table it uses, is **not connected** and ha
 - `npm run seo:verify`: checks a built `.seo-dist` by invariant:
   - output hashes, and original images unchanged;
   - canonical and indexability;
-  - the sitemap and navigation equal the approved set;
+  - the sitemap equals the approved set, and original public files (except the sitemap) remain byte-identical;
   - drafts and withdrawn pages are absent;
   - every internal link and anchor resolves;
   - related links are capped;
   - none of the 10 dashboard rules (`seo/shared/data/funnel-routing-contract.json`) shadows a route or file.
-- `npm run seo:fixtures`: runs the whole workflow in a throwaway copy of the site. It covers a sixth approved page, a draft that stays out, the index appearing on growth, and a withdrawal that cleans the output. Fixtures live in `seo/shared/fixtures` and are never published.
+- `npm run seo:fixtures`: runs the whole workflow in a throwaway copy of the site. It covers a sixth approved page, a draft that stays out, the index appearing on growth while the original homepage is preserved, and a withdrawal that cleans the output. Fixtures live in `seo/shared/fixtures` and are never published.
 
 `.github/workflows/seo-ci.yml` runs these on every pull request into main. It uses `pull_request` (not `pull_request_target`), a read-only token and no secrets. Branch protection on main requires the `seo-ci` check.
 

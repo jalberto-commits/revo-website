@@ -8,5 +8,21 @@
     },
     "appliedAt": "2026-10-08",
     "changes": []
+  },
+  {
+    "batchId": "2026-10-08-first-five-rewrite",
+    "batchHash": "sha256:340ab0b5cced1e4d233f7daabac67414df1b2f69a17147187a0991d8101fc46d",
+    "source": {
+      "kind": "manual",
+      "reference": "User authorized first-five content/navigation correction for Preview; proposed keyword map, not user-approved; no production authorization in this phase"
+    },
+    "appliedAt": "2026-10-08",
+    "changes": [
+      "updated after-hours; back to draft until re-approved",
+      "updated missed-calls; back to draft until re-approved",
+      "updated compare/ai-vs-voicemail; back to draft until re-approved",
+      "updated compare/ai-vs-live-receptionist; back to draft until re-approved",
+      "updated cost-of-missed-calls; back to draft until re-approved"
+    ]
   }
 ]

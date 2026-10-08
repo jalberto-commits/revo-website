@@ -6,3 +6,26 @@ test('five-UTM contract preserves encoded values without unknown parameters or i
 test('consent controls campaign session storage; fresh campaign replaces prior and denial clears it',()=>{const storage=memory();assert.deepEqual(captureCampaign('?utm_source=google',storage,true),{utm_source:'google'});assert.deepEqual(captureCampaign('',storage,true),{utm_source:'google'});assert.deepEqual(captureCampaign('?utm_campaign=next',storage,true),{utm_campaign:'next'});assert.deepEqual(captureCampaign('',storage,false),{});assert.equal(storage.getItem(CAMPAIGN_KEY),null);assert.equal(funnelNavigationUrl('https://www.revoapp.ai/free-test','',memory(),false),'https://www.revoapp.ai/free-test');});
 test('one click event is deduplicated and analytics context excludes query, campaign, referrer and PII',()=>{const sent=[];const record=clickRecorder((...args)=>sent.push(args));const e={};const payload=clickAnalyticsPayload('https://www.revoapp.ai/ai-answering-service/after-hours?email=private@example.invalid&utm_campaign=John#phone','hero','https://www.revoapp.ai/free-test?utm_campaign=John');assert.equal(record(e,'page:hero',payload,0),true);assert.equal(record(e,'page:hero',payload,900),false);assert.equal(record({},'page:hero',payload,100),false);assert.equal(record({},'page:hero',payload,901),true);assert.equal(sent.length,2);assert.equal(payload.page_referrer,'');assert.equal(payload.page_location,'https://www.revoapp.ai/ai-answering-service/after-hours');assert.deepEqual(Object.keys(payload).sort(),['cta_placement','destination_path','landing_page','page_location','page_referrer']);assert.ok(!JSON.stringify(sent).includes('private'));assert.ok(!JSON.stringify(sent).includes('utm'));});
 test('public chrome defaults to editorial navigation and explicit enable restores acquisition',async()=>{const {RevoBrandHeader,RevoBrandFooter}=await import('../components/RevoBrandChrome.tsx');for(const Component of [RevoBrandHeader,RevoBrandFooter]){const html=renderToStaticMarkup(React.createElement(Component,{mode:'public'}));assert.ok(!/href="[^"]*(?:free-test|signup|apps\.apple\.com|\/api\/)/i.test(html));assert.ok(html.includes('/ai-answering-service/'));}const enabled=renderToStaticMarkup(React.createElement(RevoBrandHeader,{mode:'public',acquisitionEnabled:true}));assert.ok(enabled.includes('https://www.revoapp.ai/free-test'));assert.ok(enabled.includes('https://apps.apple.com/'));});
+
+test('guide header keeps original industry destinations and removes content-only header CTAs',async()=>{
+ const {RevoBrandHeader,RevoBrandFooter}=await import('../components/RevoBrandChrome.tsx');
+ const {readFileSync}=await import('node:fs');
+ const source=readFileSync(new URL('../../../index.html',import.meta.url),'utf8');
+ const menu=source.slice(source.indexOf('<div class="megamenu">'),source.indexOf('<!-- Right Section - Actions -->'));
+ const expected=[...menu.matchAll(/href="(industry_[^"]+\.html)"/g)].map(m=>'/'+m[1]).sort();
+ const header=renderToStaticMarkup(React.createElement(RevoBrandHeader,{mode:'public',acquisitionEnabled:false}));
+ const actual=[...header.matchAll(/href="(\/industry_[^"]+\.html)"/g)].map(m=>m[1]).sort();
+ assert.deepEqual(actual,expected);
+ assert.ok(header.includes('<summary>Industry'));
+ assert.ok(!/Read call guides|Explore the worksheet|Get Started|Download for iPhone|free-test|apps\.apple\.com/.test(header));
+ assert.ok(!renderToStaticMarkup(React.createElement(RevoBrandFooter,{mode:'public'})).includes('Call planning'));
+});
+
+test('keyword headings render exactly and calculator starts without invented inputs',()=>{
+ for(const page of REVIEW_PAGES){const html=renderToStaticMarkup(React.createElement(LandingPageTemplate,{page,mode:'public'}));const heading=html.match(/<h1>(.*?)<\/h1>/s)[1].replace(/<[^>]*>/g,'');assert.equal(heading,page.h1??page.title);}
+ const calculator=REVIEW_PAGES.find(page=>page.calculator);
+ const html=renderToStaticMarkup(React.createElement(LandingPageTemplate,{page:calculator,mode:'public'}));
+ assert.equal((html.match(/<input[^>]*value=""/g)||[]).length,4);
+ assert.ok(html.includes('No costs are subtracted'));
+ assert.ok(html.includes('does not assume repeat business or annualize'));
+});

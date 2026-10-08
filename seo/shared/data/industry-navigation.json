@@ -1,0 +1,86 @@
+{
+  "homeServices": [
+    {
+      "label": "Home Service Pros",
+      "href": "/industry_home_service.html",
+      "icon": "/images/icons/solar_home-2-broken.svg"
+    },
+    {
+      "label": "Air Duct Cleaning",
+      "href": "/industry_air_duct_cleaning.html",
+      "icon": "/images/icons/fa6-solid_wind.svg"
+    },
+    {
+      "label": "Locksmith",
+      "href": "/industry_locksmith.html",
+      "icon": "/images/icons/fa7-solid_key_.svg"
+    },
+    {
+      "label": "HVAC",
+      "href": "/industry_hvac.html",
+      "icon": "/images/icons/fa6-solid_fan.svg"
+    },
+    {
+      "label": "Snow Removal",
+      "href": "/industry_snow_removal.html",
+      "icon": "/images/icons/fa7-solid_snowplow.svg"
+    },
+    {
+      "label": "Roofing",
+      "href": "/industry_roofing.html",
+      "icon": "/images/icons/fa6-solid_house_.svg"
+    },
+    {
+      "label": "Landscape",
+      "href": "/industry_landscape.html",
+      "icon": "/images/icons/fa6-solid_tree.svg"
+    },
+    {
+      "label": "Plumbing",
+      "href": "/industry_plumbing.html",
+      "icon": "/images/icons/plumbing_.svg"
+    }
+  ],
+  "professionalBusinesses": [
+    {
+      "label": "Healthcare & Medical",
+      "href": "/industry_healthcare_medical.html",
+      "icon": "/images/icons/fa6-solid_stethoscope.svg"
+    },
+    {
+      "label": "Small Business",
+      "href": "/industry_small_business.html",
+      "icon": "/images/icons/fa6-solid_shop.svg"
+    },
+    {
+      "label": "IT & Technology",
+      "href": "/industry_it_technology_communications.html",
+      "icon": "/images/icons/fa6-solid_shield-halved.svg"
+    },
+    {
+      "label": "Legal",
+      "href": "/industry_legal.html",
+      "icon": "/images/icons/fa6-solid_gavel_.svg"
+    },
+    {
+      "label": "Corporate & Government",
+      "href": "/industry_corporate_government.html",
+      "icon": "/images/icons/fa6-solid_building-columns.svg"
+    },
+    {
+      "label": "Travel & Hospitality",
+      "href": "/industry_tourism_travel_hospitality.html",
+      "icon": "/images/icons/fa6-solid_suitcase-rolling.svg"
+    },
+    {
+      "label": "Financial Services",
+      "href": "/industry_financial_service.html",
+      "icon": "/images/icons/fa6-solid_chart-line.svg"
+    },
+    {
+      "label": "Retail & eCommerce",
+      "href": "/industry_retail_ecommerce.html",
+      "icon": "/images/icons/fa6-solid_store.svg"
+    }
+  ]
+}

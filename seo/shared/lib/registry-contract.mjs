@@ -83,6 +83,7 @@ export function registryErrors(pages, options = {}) {
     if (!STATUSES.includes(page.publicationStatus)) fail(`publicationStatus must be one of ${STATUSES.join(', ')}`);
     if (!PRICING_VARIANTS.includes(page.pricingVariant)) fail(`pricingVariant must be one of ${PRICING_VARIANTS.join(', ')}`);
     if (!isText(page.title, LIMITS.title)) fail(`title must be ${LIMITS.title[0]}-${LIMITS.title[1]} characters, without outer spaces`);
+    if (page.h1 !== undefined && !isText(page.h1, [10, 120])) fail('h1 must be 10-120 characters without outer spaces');
     if (!isText(page.description, LIMITS.description)) fail(`description must be ${LIMITS.description[0]}-${LIMITS.description[1]} characters, without outer spaces`);
     if (!isText(page.navigationLabel, LIMITS.navigationLabel)) fail(`navigationLabel must be ${LIMITS.navigationLabel[0]}-${LIMITS.navigationLabel[1]} characters`);
     if (!isText(page.eyebrow, LIMITS.eyebrow)) fail(`eyebrow must be ${LIMITS.eyebrow[0]}-${LIMITS.eyebrow[1]} characters`);

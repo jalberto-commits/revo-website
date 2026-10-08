@@ -1,0 +1,500 @@
+{
+  "batchId": "2026-10-08-first-five-rewrite",
+  "source": {
+    "kind": "manual",
+    "reference": "User authorized first-five content/navigation correction for Preview; proposed keyword map, not user-approved; no production authorization in this phase"
+  },
+  "operations": [
+    {
+      "op": "update",
+      "record": {
+        "slug": "after-hours",
+        "title": "After-Hours Answering Service for Home Service Businesses",
+        "description": "Keep home service calls moving after closing with 24/7 AI answering, appointment booking, SMS follow-up and clear next-day handoffs.",
+        "eyebrow": "After-hours answering service",
+        "lead": "Give callers a useful next step when your office is closed.",
+        "intro": "A leaking pipe or an air conditioner that stops at night can bring a call long after your last appointment. An after-hours answering service gives that caller a conversation instead of asking them to wait for office hours. Revo provides 24/7 AI answering with your script, hours and rules, appointment booking, SMS follow-up and call summaries.",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "sections": [
+          {
+            "title": "What happens when a customer calls after hours?",
+            "paragraphs": [
+              "Revo’s published service includes around-the-clock answering and scheduling. Your evening call flow can ask what service the caller needs, collect the information your office uses and offer the next step allowed by your booking rules.",
+              "For example, a homeowner calling about an AC problem could explain the issue, give the service address and request an appointment. Decide which appointment options the agent may offer and what must wait for a technician. A scheduled visit is separate from a promise of immediate dispatch."
+            ],
+            "items": [
+              "Set your service area and the job types you accept.",
+              "Define after-hours appointment availability and callback expectations.",
+              "Write the instructions for urgent requests and calls outside your scope."
+            ]
+          },
+          {
+            "title": "Use one script for booking and one clear handoff.",
+            "paragraphs": [
+              "Your own script, hours and rules are included in the published plans. Use them to explain what your business can do tonight, what it can book for a later date and when your office will follow up. Keep estimates, arrival windows and emergency instructions within the information you have authorized.",
+              "Revo lists SMS follow-up and a dashboard with summaries. Those tools support the handoff: your office can review the call and take the next action when it opens. SMS follow-up is a listed service feature; it does not establish an automatic text-back for every unanswered call."
+            ],
+            "items": [
+              "Ask for the service request, location and preferred callback details.",
+              "Agree who reviews summaries at the start of the next shift.",
+              "Test a normal booking, an unavailable slot and an out-of-area request."
+            ]
+          },
+          {
+            "title": "Match escalation rules to the plan you choose.",
+            "paragraphs": [
+              "If you want a call transferred to an on-call team member, compare that requirement with the plan features. Transfers are listed for Crew and Fleet, and are not included in Solo. The person receiving the transfer still needs an agreed availability and fallback process.",
+              "If there is no staffed on-call route, make that clear in the script and provide the next permitted appointment or callback step. For an immediate safety emergency, your instructions should direct callers to the appropriate emergency service rather than promise a technician response."
+            ],
+            "items": [
+              "Identify the on-call recipient and covered hours.",
+              "Specify the fallback if the team member cannot answer.",
+              "Review current plan features and Launch Offer terms on Pricing."
+            ]
+          },
+          {
+            "title": "Review the overnight calls before changing your coverage.",
+            "paragraphs": [
+              "Track the requests your business receives outside office hours: new jobs, existing-customer updates, cancellations and calls you cannot serve. Use the summaries to find questions that need a clearer answer in your script.",
+              "After-hours answering gives your business a way to handle the conversation. Whether a call becomes a completed job depends on availability, customer choice and your team’s follow-through. Compare the service against your real call volume and operating needs."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Does Revo answer calls after my office closes?",
+            "a": "Revo’s Services page and published plans list 24/7 answering. Configure your business hours and rules so the agent distinguishes office availability from its own answering coverage."
+          },
+          {
+            "q": "Can an after-hours call become an appointment?",
+            "a": "Appointment booking is a published feature. Define the calendar options, job types and booking limits your business supports; booking does not by itself promise immediate technician dispatch."
+          },
+          {
+            "q": "Can calls go to my on-call technician?",
+            "a": "Crew and Fleet list transfers to your team; Solo does not. Set the recipient, availability and fallback instructions before using that route."
+          },
+          {
+            "q": "What will my office see the next morning?",
+            "a": "The plans list a call dashboard with summaries and SMS follow-up. Agree which person checks the summaries and handles unresolved requests when the office opens."
+          }
+        ],
+        "takeaway": "Answer after hours with a booking path and a clear handoff.",
+        "pricingVariant": "full",
+        "navigationLabel": "After-hours answering service",
+        "source": {
+          "kind": "manual",
+          "reference": "User-authorized first-five rewrite; keyword map proposed from supplied Semrush US 2026-10-08; repository Services/Pricing checked 2026-10-08, official pricing snapshot 2026-10-06; Preview review required before merge"
+        },
+        "h1": "After-Hours Answering Service for Home Service Businesses"
+      }
+    },
+    {
+      "op": "update",
+      "record": {
+        "slug": "missed-calls",
+        "title": "How to Stop Missing Business Calls",
+        "description": "A practical plan for home service teams to stop missing business calls: review coverage gaps, set answering rules and follow through on bookings.",
+        "eyebrow": "Stop missing business calls",
+        "lead": "Build a call coverage plan around the moments your team cannot answer.",
+        "intro": "If you want to stop missing business calls, start with the gaps in your own operation: a technician driving, an office already on another call or a customer calling after closing. For a home service business, a practical plan combines answering coverage, a useful intake script and a person responsible for the next step.",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "sections": [
+          {
+            "title": "Find when business calls go unanswered.",
+            "paragraphs": [
+              "Review your call records for a defined period and group unanswered calls by time of day. Separate new service inquiries from repeat callers, spam and existing-customer messages. Ten call attempts do not necessarily represent ten different jobs.",
+              "Then match each gap to a cause. A busy office may need overflow coverage, a one-person business may need help while working on site, and an evening gap may need after-hours answering. This identifies what to change without inventing a lost-sales total."
+            ],
+            "items": [
+              "Choose one complete period, such as your most recent working week.",
+              "Count unique relevant inquiries where your records allow it.",
+              "Note busy times, unavailable staff and calls outside office hours."
+            ]
+          },
+          {
+            "title": "Choose a backup answering route and test it.",
+            "paragraphs": [
+              "Revo’s published 24/7 AI answering can support a coverage plan when your team is unavailable. It also lists appointment booking, your own script, hours and rules, SMS follow-up and call summaries. Decide which of those tasks the agent should perform for your business.",
+              "Confirm the call-routing setup supported by your phone provider before changing it. Test the route with controlled calls: your team answering normally, a busy period, an unavailable office and an after-hours request. Those tests verify your configuration; they are not a guarantee that every future call will be answered."
+            ],
+            "items": [
+              "Keep the business greeting and service area current.",
+              "Check the route used when nobody can pick up.",
+              "Test the fallback and how your team receives the call information."
+            ]
+          },
+          {
+            "title": "Give each caller a specific next step.",
+            "paragraphs": [
+              "For an illustrative plumbing inquiry, the script might ask for the problem, service address and preferred appointment time. The next step could be a booking within your permitted availability or an office callback for a request that needs more review.",
+              "If a caller needs a team member, transfers are available in Crew and Fleet, not Solo. Set a fallback for unanswered transfers. SMS follow-up is included in the published plans, but do not assume that an unanswered call automatically triggers a missed-call text-back."
+            ],
+            "items": [
+              "Define the questions needed to handle the service request.",
+              "Distinguish a requested appointment from a confirmed booking.",
+              "Name the person who owns exceptions, messages and follow-up."
+            ]
+          },
+          {
+            "title": "Check completion, not just whether the phone was answered.",
+            "paragraphs": [
+              "Review call summaries alongside your appointment records. Ask whether the right details were collected, the promised callback happened and the booking matched your business rules. Fix unclear script questions and handoffs before widening coverage.",
+              "Keep answered calls, qualified inquiries, appointments and completed jobs as separate measures. A change in one does not establish a change in revenue, and the same caller should not be counted several times as a new opportunity."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "What is the first step to stop missing business calls?",
+            "a": "Use a defined period of call records to identify when your team cannot answer. Separate unique service inquiries from repeat attempts and irrelevant calls, then choose coverage for the actual gap."
+          },
+          {
+            "q": "Can Revo book a job while my team is busy?",
+            "a": "Revo publishes appointment booking as a feature. Set the job types, availability and booking rules it can use. An appointment is not the same as completed work or an immediate dispatch."
+          },
+          {
+            "q": "Does Revo automatically text every missed caller?",
+            "a": "The published plans list SMS follow-up. These sources do not establish automatic missed-call text-back behavior, so confirm that specific requirement before relying on it."
+          },
+          {
+            "q": "How do I know whether the new answering setup works?",
+            "a": "Make controlled test calls and review the greeting, intake, booking limits, transfer fallback and summaries. Then track real call handling and your team’s follow-up during the same reporting period."
+          }
+        ],
+        "takeaway": "Close the coverage gap, then check that each next step happens.",
+        "pricingVariant": "missed-calls",
+        "navigationLabel": "Stop missing business calls",
+        "source": {
+          "kind": "manual",
+          "reference": "User-authorized first-five rewrite; keyword map proposed from supplied Semrush US 2026-10-08; repository Services/Pricing checked 2026-10-08, official pricing snapshot 2026-10-06; Preview review required before merge"
+        },
+        "h1": "How to Stop Missing Business Calls"
+      }
+    },
+    {
+      "op": "update",
+      "record": {
+        "slug": "compare/ai-vs-voicemail",
+        "title": "AI Receptionist vs Voicemail for Home Service Businesses",
+        "description": "Compare an AI receptionist with voicemail for home service calls: caller questions, appointment booking, follow-up and the work your team still owns.",
+        "eyebrow": "AI receptionist vs voicemail",
+        "lead": "Compare a recorded message with a call that can move to the next step.",
+        "intro": "AI receptionist vs voicemail is a choice about what happens during the call. Voicemail records what a caller leaves for your team to review. An AI receptionist can ask questions and follow a configured call flow. Revo’s published service also includes appointment booking, SMS follow-up and call summaries.",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "comparison": {
+          "left": "Voicemail",
+          "right": "Revo AI receptionist",
+          "rows": [
+            [
+              "During the call",
+              "The caller leaves a message after the greeting.",
+              "The agent follows your configured script, hours and rules."
+            ],
+            [
+              "Scheduling",
+              "Your team normally handles the booking after reviewing the message.",
+              "Appointment booking is a published feature, within your setup and availability."
+            ],
+            [
+              "Information for the office",
+              "The recording contains the details the caller chose to leave.",
+              "The published plans include a call dashboard with summaries."
+            ],
+            [
+              "Follow-up",
+              "Your team decides when and how to return the message.",
+              "SMS follow-up is listed; your team still owns unresolved requests."
+            ],
+            [
+              "Transfer to a person",
+              "Depends on the phone system, separate from message recording.",
+              "Transfers to your team are listed in Crew and Fleet, not Solo."
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "title": "A service request can need more than a recorded message.",
+            "paragraphs": [
+              "Imagine a homeowner calling a roofing business to ask for an inspection. A voicemail might capture a name and number, leaving the office to call back for the address, request and timing. A configured AI call flow can ask those questions during the conversation and use the booking options your business permits.",
+              "This is an illustrative difference in workflow, not evidence that one option produces more bookings. Some calls only need a message. Others benefit from a conversation that clarifies the request and gives a next step."
+            ],
+            "items": [
+              "List the details your office routinely asks for on callbacks.",
+              "Identify which requests can move to an appointment during the call.",
+              "Keep a callback route for questions the agent cannot resolve."
+            ]
+          },
+          {
+            "title": "Choose what happens after the greeting.",
+            "paragraphs": [
+              "With voicemail, keep the greeting accurate: business name, office hours and the information callers should leave. Assign someone to review messages and return calls. A recording helps only when the message is clear and the team follows through.",
+              "With Revo, write the intake questions and booking boundaries into your own script, hours and rules. The published plans include 24/7 answering, SMS follow-up and summaries. Use those features to support a defined workflow rather than assume the agent can answer every business-specific question."
+            ],
+            "items": []
+          },
+          {
+            "title": "Test the same requests on both options.",
+            "paragraphs": [
+              "Use a small set of realistic calls: an available appointment, a request outside your service area and an existing customer asking for an update. For voicemail, review the information left and the callback work required. For the AI receptionist, review the answers and the next step produced.",
+              "Check how unresolved requests reach your team. Crew and Fleet list transfers; Solo does not. If your chosen plan uses a message or callback instead, write that expectation clearly and make someone responsible for it."
+            ],
+            "items": [
+              "Can the caller understand what will happen next?",
+              "Is the information complete enough for your office to act?",
+              "Does the flow stay within booking and service boundaries?"
+            ]
+          },
+          {
+            "title": "Use a simple choice rule for your business.",
+            "paragraphs": [
+              "Voicemail may fit a business that wants a message-taking route and can reliably return those messages. An AI receptionist may fit calls that need structured intake or appointment options while the office is unavailable.",
+              "Compare the workload you want handled, the current plan terms and the time your office still spends on follow-up. This page supports that decision; it does not predict traffic, conversion rates or savings."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "What is the main difference between an AI receptionist and voicemail?",
+            "a": "Voicemail records a message for later review. An AI receptionist follows a conversational flow and may handle tasks during the call. Revo publishes appointment booking, SMS follow-up and call summaries as features."
+          },
+          {
+            "q": "Can voicemail book appointments?",
+            "a": "A basic voicemail recording does not itself schedule a visit; your team normally completes that step. Revo lists booking as a feature, subject to your configured availability and rules."
+          },
+          {
+            "q": "Do I still need to review calls with an AI receptionist?",
+            "a": "Yes. Your team should review summaries, handle exceptions and check that bookings and follow-up match your business rules."
+          },
+          {
+            "q": "Which option should a small home service business choose?",
+            "a": "Choose based on the calls you receive and the work you need handled. Compare message-taking with structured intake and booking using the same realistic test requests."
+          }
+        ],
+        "takeaway": "Choose the call workflow your office can follow through on.",
+        "pricingVariant": "voicemail",
+        "navigationLabel": "AI receptionist vs voicemail",
+        "source": {
+          "kind": "manual",
+          "reference": "User-authorized first-five rewrite; keyword map proposed from supplied Semrush US 2026-10-08; repository Services/Pricing checked 2026-10-08, official pricing snapshot 2026-10-06; Preview review required before merge"
+        },
+        "h1": "AI Receptionist vs Voicemail for Home Service Businesses"
+      }
+    },
+    {
+      "op": "update",
+      "record": {
+        "slug": "compare/ai-vs-live-receptionist",
+        "title": "AI Receptionist vs Human Receptionist for Home Services",
+        "description": "Compare AI and human receptionists for home services across coverage, booking, transfers, exceptions and the costs your own business can verify.",
+        "eyebrow": "AI vs human receptionist",
+        "lead": "Divide routine calls and exceptions according to the work each needs.",
+        "intro": "AI receptionist vs human receptionist is a comparison of coverage, tasks and judgment. A person can handle changing context and complex conversations. Revo offers 24/7 AI answering, appointment booking and a configured script, hours and rules. A home service business can use the comparison to decide which calls to automate and which should reach its team.",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "comparison": {
+          "left": "Human receptionist",
+          "right": "Revo AI receptionist",
+          "rows": [
+            [
+              "Coverage",
+              "Use the actual hours and backup arrangements of your employee or service.",
+              "24/7 answering is listed in the published service and plans."
+            ],
+            [
+              "Booking",
+              "A person uses your availability and business instructions.",
+              "Booking follows the options and rules configured for your business."
+            ],
+            [
+              "Exceptions",
+              "A person can discuss unusual requests and apply authorized judgment.",
+              "Define boundaries and a route back to your team for unresolved requests."
+            ],
+            [
+              "Transfers",
+              "Depends on the receptionist service or phone setup.",
+              "Crew and Fleet include transfers to your team; Solo excludes them."
+            ],
+            [
+              "Costs to compare",
+              "Use your actual staffing costs or a written provider quote.",
+              "Use current subscription terms, included minutes and expected usage."
+            ]
+          ]
+        },
+        "sections": [
+          {
+            "title": "Start with the calls that need a conversation with your team.",
+            "paragraphs": [
+              "A customer disputing a previous repair, requesting an unusual job or asking for a decision outside standard policy may need a person who can investigate and act. Identify those calls before deciding how much work to assign to an AI receptionist.",
+              "For routine intake, an AI flow can use consistent questions and booking instructions. For example, an HVAC office might route standard appointment requests through a configured flow while keeping complaints and technical exceptions with its staff. That is a proposed operating model, not a measured customer result."
+            ],
+            "items": [
+              "List routine appointment and service-area questions.",
+              "Mark requests that require staff authorization or investigation.",
+              "Set a handoff for anything outside the approved script."
+            ]
+          },
+          {
+            "title": "Compare coverage and booking as separate requirements.",
+            "paragraphs": [
+              "A human receptionist’s coverage depends on the hours and backup arrangement you actually have. Revo publishes 24/7 availability. In either case, answering coverage and technician availability are different: a conversation outside office hours does not make every job immediately serviceable.",
+              "Appointment booking is included in the published Revo plans. Configure your working hours, eligible jobs and appointment choices. Review whether the caller receives a confirmed slot or a request that needs a person to follow up."
+            ],
+            "items": []
+          },
+          {
+            "title": "Build a handoff that keeps your team in control.",
+            "paragraphs": [
+              "Revo’s call dashboard with summaries gives the office information to review, and SMS follow-up is listed in the plans. Crew and Fleet also include transfers to your team. Solo does not include those transfers, so choose a plan that matches the escalation route you need.",
+              "Write down who receives exceptions and what happens if that person is unavailable. Review the handoff with test calls, including an unresolved request and a caller asking to speak to someone. Keep the promised callback or transfer within your actual staffing arrangement."
+            ],
+            "items": [
+              "Assign a recipient for each category of exception.",
+              "Set a fallback for an unanswered transfer or unavailable office.",
+              "Review summaries and booking records for the same reporting period."
+            ]
+          },
+          {
+            "title": "Compare verified costs without assuming savings.",
+            "paragraphs": [
+              "Use an actual human receptionist quote or your staffing costs for a defined period. Include the hours and responsibilities covered. For Revo, use current plan terms, included minutes and your expected handled usage. Do not derive an overage rate by dividing the subscription by included minutes.",
+              "Include the work that remains with your team: reviewing summaries, resolving exceptions and confirming appointments when needed. A subscription comparison alone does not establish savings, return on investment or an identical level of service."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Can an AI receptionist replace every task a human handles?",
+            "a": "This comparison does not establish that. Separate routine intake and booking from requests requiring investigation or judgment, then define how those exceptions reach your team."
+          },
+          {
+            "q": "Can Revo work alongside an existing receptionist?",
+            "a": "Its published 24/7 answering and configured call rules can support a coverage plan. Confirm the call-routing setup and the division of tasks before relying on that arrangement."
+          },
+          {
+            "q": "Which Revo plans include transfers to a human?",
+            "a": "Crew and Fleet list transfers to your team. Solo does not include that feature. Use the current Pricing page to review the rest of each plan’s scope."
+          },
+          {
+            "q": "How should I compare the cost of AI and a human receptionist?",
+            "a": "Use the same period, actual staffing costs or a written quote, and current Revo terms with expected usage. Include remaining office work; do not treat a price difference as proven savings or ROI."
+          }
+        ],
+        "takeaway": "Keep routine coverage consistent and give exceptions a human owner.",
+        "pricingVariant": "receptionist",
+        "navigationLabel": "AI vs human receptionist",
+        "source": {
+          "kind": "manual",
+          "reference": "User-authorized first-five rewrite; keyword map proposed from supplied Semrush US 2026-10-08; repository Services/Pricing checked 2026-10-08, official pricing snapshot 2026-10-06; Preview review required before merge"
+        },
+        "h1": "AI Receptionist vs Human Receptionist for Home Services"
+      }
+    },
+    {
+      "op": "update",
+      "record": {
+        "slug": "cost-of-missed-calls",
+        "title": "Cost of Missed Calls: A Potential Revenue Calculator",
+        "description": "Explore potential gross job value from unanswered home service inquiries with your own period, inquiry count, booking assumption and job value.",
+        "eyebrow": "Cost of missed calls",
+        "lead": "Estimate the opportunity you want to investigate, using your own inputs.",
+        "intro": "The cost of missed calls is not a number a calculator can observe on its own. This missed call calculator estimates hypothetical gross job value from unanswered qualified inquiries in a period you choose. It does not calculate an actual expense, confirmed lost revenue, savings, profit or ROI.",
+        "sourcePaths": [
+          "https://www.revoapp.ai/services.html",
+          "https://www.revoapp.ai/pricing.html",
+          "seo/shared/lib/official-pricing.ts"
+        ],
+        "calculator": true,
+        "sections": [
+          {
+            "title": "Use one period and count qualified inquiries once.",
+            "paragraphs": [
+              "Start with call records for a defined period, such as a particular week or month. Count relevant unanswered service inquiries rather than every ring or repeat call attempt. Exclude spam, existing-customer updates and requests your business cannot serve if they are not new job opportunities.",
+              "Some callers may reach you later or use another channel. If you can identify those inquiries, separate them before choosing a count. The calculator cannot tell you which callers were lost or whether they would have booked."
+            ],
+            "items": [
+              "Enter a clear period label; there is no automatic annualization.",
+              "Use unique qualified inquiries where your records support them.",
+              "Separate inquiries already resolved or booked through another route."
+            ]
+          },
+          {
+            "title": "Choose assumptions and show the arithmetic.",
+            "paragraphs": [
+              "The formula is unanswered qualified inquiries × assumed booking probability ÷ 100 × assumed average job value. A booking probability is your assumption about how many of those inquiries might become jobs, not a rate supplied or validated by Revo.",
+              "Illustrative example only: 40 qualified inquiries in one month × 25% assumed booking probability × $200 assumed job value = $2,000 potential gross job value for that month. These are example inputs, not customer data, a recommended forecast or defaults in the calculator."
+            ],
+            "items": [
+              "Use a probability you can explain from your own records or scenario.",
+              "Enter gross job value in USD, not margin or subscription savings.",
+              "Compare separate low and high scenarios if the inputs are uncertain."
+            ]
+          },
+          {
+            "title": "Keep potential value separate from costs and recurrence.",
+            "paragraphs": [
+              "The result does not subtract labor, materials, refunds, answering-service fees or the office time needed to follow up. A booked appointment may not become completed work. Those limits are why the result is labeled potential gross job value.",
+              "The calculator also does not infer repeat business or multiply a month into a year. If you want a longer period, use records and assumptions for that period. Calculate actual costs and profit separately using expenses and completed jobs you can verify."
+            ],
+            "items": []
+          },
+          {
+            "title": "Use the scenario to review call coverage.",
+            "paragraphs": [
+              "A scenario can help you decide which unanswered calls to investigate and whether your coverage plan needs attention. Revo publishes 24/7 answering, appointment booking, your own script, hours and rules, SMS follow-up and a dashboard with summaries.",
+              "Compare those tasks with your operating gap and current plan terms. Transfers to your team are included in Crew and Fleet, not Solo. The potential-value result does not show how many jobs an answering service will create or whether a subscription will pay for itself."
+            ],
+            "items": []
+          }
+        ],
+        "faqs": [
+          {
+            "q": "Does this missed call calculator show my actual lost revenue?",
+            "a": "No. It combines an inquiry count with your booking and job-value assumptions. It cannot determine which caller would have booked or what work would have been completed."
+          },
+          {
+            "q": "Why is the result potential gross job value instead of savings?",
+            "a": "The formula does not measure expenses or subtract costs. It estimates a possible gross value for a chosen period, so it is not savings, profit or ROI."
+          },
+          {
+            "q": "Are there preset customer numbers in the calculator?",
+            "a": "No. All four inputs start blank. You supply the period, unanswered qualified inquiry count, assumed booking probability and assumed average job value."
+          },
+          {
+            "q": "Can I turn a monthly result into an annual forecast?",
+            "a": "The calculator does not annualize or assume repeat business. Use a separate scenario for a longer period with appropriate records and explain any assumptions you introduce."
+          }
+        ],
+        "takeaway": "Use the estimate as a question to investigate, not a claim of savings.",
+        "pricingVariant": "worksheet",
+        "navigationLabel": "Missed call calculator",
+        "source": {
+          "kind": "manual",
+          "reference": "User-authorized first-five rewrite; keyword map proposed from supplied Semrush US 2026-10-08; repository Services/Pricing checked 2026-10-08, official pricing snapshot 2026-10-06; Preview review required before merge"
+        },
+        "h1": "Cost of Missed Calls: A Potential Revenue Calculator"
+      }
+    }
+  ]
+}

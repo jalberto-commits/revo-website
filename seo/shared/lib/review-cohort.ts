@@ -5,7 +5,7 @@ export type PageMode = "review" | "public";
 export type PricingVariant = "full" | "missed-calls" | "voicemail" | "receptionist" | "worksheet";
 export type PublicationStatus = "draft" | "approved" | "withdrawn";
 export interface ReviewRecord { reviewer: string; reviewedAt: string; contentHash: string; note?: string }
-export interface ReviewPage { pricingVariant:PricingVariant; navigationLabel:string; publicationStatus:PublicationStatus; source?:{kind:string;reference:string}; review?:ReviewRecord; withdrawal?:{reason:string;at:string}; related?:string[]; image?:string; slug: string; title: string; description: string; eyebrow: string; lead: string; intro: string; sourcePaths: string[]; sections: ReviewSection[]; faqs: {q:string;a:string}[]; takeaway:string; calculator?:boolean; comparison?:{left:string;right:string;rows:string[][]} }
+export interface ReviewPage { pricingVariant:PricingVariant; navigationLabel:string; publicationStatus:PublicationStatus; source?:{kind:string;reference:string}; review?:ReviewRecord; withdrawal?:{reason:string;at:string}; related?:string[]; image?:string; slug: string; title: string; h1?:string; description: string; eyebrow: string; lead: string; intro: string; sourcePaths: string[]; sections: ReviewSection[]; faqs: {q:string;a:string}[]; takeaway:string; calculator?:boolean; comparison?:{left:string;right:string;rows:string[][]} }
 export const REVIEW_PAGES: ReviewPage[] = landingPages as ReviewPage[];
 export const REVIEW_INDEX = "/ai-answering-service/review";
 export function reviewPath(slug:string) { return `/ai-answering-service/${slug}`; }

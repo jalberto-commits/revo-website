@@ -5,7 +5,7 @@ const args=process.argv.slice(2);function option(name,fallback){const i=args.ind
 const website=resolve(app,option('--website',config.websiteRoot)),shared=resolve(app,option('--shared',config.sharedRoot)),output=resolve(website,option('--output',config.outputDirectory));
 if([website,shared,app].includes(output)||/\/(?:\.git|node_modules|\.agents|\.codex)(?:\/|$)/.test(output))throw Error('Unsafe output path');
 const {readRegistry,landingPath,approvedPages}=await import(pathToFileURL(join(shared,'lib/landing-registry.mjs')));
-const {publicRoutes,homeNavigation,seoRewrites,currentSeoRewrites,INDEX_PATH}=await import(pathToFileURL(join(app,'tools/routes.mjs')));
+const {publicRoutes,seoRewrites,currentSeoRewrites,INDEX_PATH}=await import(pathToFileURL(join(app,'tools/routes.mjs')));
 // The registry is validated in full (fields, uniqueness, review hash, assets) before anything is built.
 const registry=readRegistry(pathToFileURL(shared+'/'),{websiteRoot:website});const pages=approvedPages(registry);if(!pages.length)throw Error('No approved pages');
 // Vercel reads routes from the committed vercel.json, so a stale file must stop the build rather than publish unrouted pages.
@@ -34,7 +34,8 @@ const stage=output+'.building';await rm(stage,{recursive:true,force:true});await
 for(const f of originals)await copyFile(join(website,f),join(stage,f));
 for(const f of exported){const rel=relative(join(app,'out'),f);if(rel.startsWith('_next/')||rel.startsWith('ai-answering-service/assets/')||expected.some(p=>rel===p+'.html'||rel===p+'.txt'))await copyFile(f,join(stage,rel));}
 const sitemapPath=join(stage,'sitemap.xml');let sitemap=await readFile(sitemapPath,'utf8');for(const route of routes){const url=origin+route;if(!sitemap.includes('<loc>'+url+'</loc>'))sitemap=sitemap.replace('</urlset>',`  <url><loc>${url}</loc></url>\n</urlset>`);}await writeFile(sitemapPath,sitemap);
-const indexPath=join(stage,'index.html');let index=await readFile(indexPath,'utf8');if(index.includes('data-revo-call-planning'))throw Error('Unexpected preexisting generated nav');const pos=index.lastIndexOf('</footer>');if(pos<0)throw Error('Homepage footer missing');const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');const nav='<nav data-revo-call-planning aria-label="Call planning" style="padding:24px 0;display:flex;gap:20px;flex-wrap:wrap">'+homeNavigation(registry,config).map(link=>`<a href="${link.href}">${escape(link.label)}</a>`).join('')+'</nav>';await writeFile(indexPath,index.slice(0,pos)+nav+index.slice(pos));
+// Original homepage and navigation are copied byte-for-byte; guide links stay on guide pages.
+
 const all=await walk(stage);if(all.some(f=>/\.(sql|md|env)$/i.test(f)||relative(stage,f).startsWith('api/')||relative(stage,f).startsWith('seo/')))throw Error('Internal source leaked into static output');
 for(const route of routes){const body=await readFile(join(stage,route.slice(1)+'.html'),'utf8');if(!body.includes('index, follow')||!body.includes(origin+route)||body.includes('Private editorial review')||body.includes('simulated receipt')||body.includes('<form'))throw Error('Public route invariant failed');}
 const hashes={};for(const f of all)hashes[relative(stage,f)]=createHash('sha256').update(await readFile(f)).digest('hex');

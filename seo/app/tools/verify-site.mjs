@@ -17,7 +17,7 @@ const output = resolve(website, option('--output', config.outputDirectory));
 
 const { readRegistry, landingPath, approvedPages } = await import(pathToFileURL(join(shared, 'lib/landing-registry.mjs')));
 const { LIMITS } = await import(pathToFileURL(join(shared, 'lib/registry-contract.mjs')));
-const { publicRoutes, homeNavigation, seoRewrites, currentSeoRewrites } = await import(pathToFileURL(join(app, 'tools/routes.mjs')));
+const { publicRoutes, seoRewrites, currentSeoRewrites } = await import(pathToFileURL(join(app, 'tools/routes.mjs')));
 
 const registry = readRegistry(pathToFileURL(shared + '/'), { websiteRoot: website });
 const pages = approvedPages(registry);
@@ -71,12 +71,13 @@ assert.equal(new Set(locs).size, locs.length, 'Duplicate sitemap URLs');
 const seoLocs = locs.filter(loc => loc === origin + '/ai-answering-service' || loc.startsWith(origin + '/ai-answering-service/'));
 assert.deepEqual([...seoLocs].sort(), routes.map(route => origin + route).sort(), 'Sitemap guide URLs differ from the approved routes');
 
-// 5. Homepage navigation is generated from the same approved set, capped.
+// 5. Every original public file is preserved, except the sitemap's added guide URLs.
+for (const [file, hash] of Object.entries(manifest.sourceHashes)) {
+  if (file !== 'sitemap.xml') assert.equal(await sha256(join(output, file)), hash, 'Original public file changed in output: ' + file);
+}
 const home = await readFile(join(output, 'index.html'), 'utf8');
-const nav = home.match(/<nav data-revo-call-planning[^>]*>(.*?)<\/nav>/s);
-assert.ok(nav, 'Homepage call-planning navigation missing');
-const navLinks = [...nav[1].matchAll(/<a href="([^"]+)">/g)].map(match => match[1]);
-assert.deepEqual(navLinks, homeNavigation(registry, config).map(link => link.href), 'Homepage navigation differs from the approved registry');
+assert.ok(!home.includes('data-revo-call-planning'), 'Generated guide navigation leaked into original homepage');
+const homeLinks = [...home.matchAll(/href="([^"#]+)"/g)].map(match => match[1]);
 
 // 6. Draft and withdrawn records are nowhere: no file, no sitemap URL, no link.
 for (const page of unpublished) {
@@ -84,7 +85,7 @@ for (const page of unpublished) {
   for (const suffix of ['.html', '.txt']) assert.ok(!existsSync(join(output, path.slice(1) + suffix)), `Unpublished page in output (${page.publicationStatus}): ${path}`);
   assert.ok(!locs.includes(origin + path), 'Unpublished page in sitemap: ' + path);
   for (const route of routes) assert.ok(!(await html(route)).includes(`href="${path}"`), `Unpublished page ${path} linked from ${route}`);
-  assert.ok(!navLinks.includes(path), 'Unpublished page in homepage navigation: ' + path);
+  assert.ok(!homeLinks.includes(path), 'Unpublished page in homepage navigation: ' + path);
 }
 
 // 7. Links: related guides capped; every internal link and anchor resolves.
@@ -137,6 +138,6 @@ for (const file of actual) assert.deepEqual(shadowedBy('/' + file), [], 'Public 
 
 console.log(
   `PASS release output hashes, ${pages.length} approved pages / ${routes.length} public routes, ` +
-  `${unpublished.length} unpublished records absent, sitemap and homepage navigation from the registry, ` +
+  `${unpublished.length} unpublished records absent, sitemap from registry, original public files and navigation preserved, ` +
   `${checkedLinks} internal links resolved, ${contract.rules.length} project routing rules unshadowed (contract version ${contract.versionId})`,
 );
